@@ -82,7 +82,7 @@ if(isset($_POST['apply']))
 
             <div class="text-center">
                 <h2 style="color: #fff;">Click on Apply button to Apply Job</h2>
-                
+
             </div>
             <br><br>
             <div class="container">
@@ -95,8 +95,8 @@ if(isset($_POST['apply']))
 
                         <div class="col-md-4"></div>
                         <?php
-                            $ids = $_GET['id'];
-                        $sql = "SELECT * FROM company WHERE id = '$ids' Order By cname ASC";
+                        $ids = $_GET['city'];
+                        $sql = "SELECT * FROM company WHERE ccity LIKE '%$ids%' Order By cname ASC";
                         $result = $con->query($sql);
                         if($result->num_rows > 0)
                         {

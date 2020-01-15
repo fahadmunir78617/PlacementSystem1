@@ -421,7 +421,22 @@ Get our Jobs
             <div class="row">
                 <div class="col-md-3">
                     <div class="bg-jobs-inner" style="position: relative;">
-                        <a href="#"><img src="images/Gujranwala.jpg" width="100%" class="rounded" height="150"></a>
+                        <?php
+                        if (isset($_SESSION['fname'])) {
+                            ?>
+
+                            <a href="frontpagecityresult.php?city=Gujranwala"><img src="images/Gujranwala.jpg" width="100%" class="rounded" height="150"></a>
+                            <?php
+                        }
+
+                        else {
+                            ?>
+                            <a href="javascript:void(0)"onclick="message()"><img src="images/Gujranwala.jpg"
+                                                                                   width="100%" class="rounded"
+                                                                                   height="150"></a>
+                            <?php
+                        }
+                        ?>
                         <div class="bg-jobs-outer" style="position: absolute;
     top: 50%;left: 50%;transform: translate(-50%,-50%);">
                             <a href="#"><h3>Gujranwala</h3></a>
