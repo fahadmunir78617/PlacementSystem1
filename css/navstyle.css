@@ -1,0 +1,63 @@
+html, body {
+      margin: 0;
+      padding: 0;
+      font-family: "Helvetica";
+}
+.img-header-bg{
+      background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url('../images/home-bg.jpg');
+      width: 100%;
+      height: 100vh;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+}
+.header-upper-content{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      text-align: center;
+}
+.header-upper-content h1{
+      color: #fff;
+      font-weight: 100!important;
+      
+}
+/*=======================================*/
+.footer-social-1 li{
+      list-style: none;
+      color: white;
+}
+.footer-ul ul li{
+      list-style: none;
+
+}
+.footer-ul ul li a{
+      color: #fff;
+      text-decoration: none;
+      margin-bottom: 8px;
+      font-size: 18px;
+}
+#contact input[type="text"]{
+      outline: none;
+      border:none;
+      border-bottom: 2px solid grey;
+      transition: 0.2s linear;
+      
+}
+#contact .firt-input{
+      margin-right: 5px;
+
+}
+#contact input[type="text"]:focus{
+      border-bottom: 2px solid black;
+      box-shadow: none;
+}
+#contact textarea{
+      border: 2px solid grey;
+      transition: 0.3s linear;
+}
+#contact textarea:focus{
+      border: 2px solid black;
+      box-shadow: none;
+}
