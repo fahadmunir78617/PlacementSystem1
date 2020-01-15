@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>file</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="mysheet.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />
+    
+</head>
+<body>  
+<div>
+	<h2 id="heading">Practice with JavaScript</h2>
+	<ul id="ul">
+		<li>Display1</li>
+		<li>Display2</li>
+		<li>Display3</li>
+	</ul>
+	<button id="button">Add new dsiplay</button>
+	<h3>MyForm</h3>
+	<form name="myform" class="form-group" action="#" onsubmit="return formfunc()">
+		<label>First Name</label>
+		<input type="text" id="namefirst" name="fname"><br>
+		<label>Number between 1 to 10</label>
+		<input type="number" name="number">
+		<br>
+		<label>Phone Number</label>
+		<input type="number" name="cell" pattern="[0-9]{4}[0-9]{7}">
+		<input type="submit" name="submit">
+	</form>
+
+</div>
+<script>
+	var heading=document.getElementById("heading");
+
+	var button=document.getElementById("button");
+	var parent=document.getElementById("ul");
+	var childs=parent.getElementsByTagName("li");
+	var countdisplay=4;
+
+button.addEventListener("click",newlist) ;
+	function newlist() {
+		// body..
+		 // heading.innerHTML="new Value";
+		// for(i=0;i<childs.length;i++)
+		// {
+		// 	childs[i].innerHTML="NewDisplay"+i;
+		// }
+		//heading.innerHTML=this.innerHTML;
+		parent.innerHTML +="<li>Display "+countdisplay+"</li>";
+		countdisplay++;
+	}
+
+	//Whenlistsclick
+	for(i=0;i<childs.length;i++)
+	{
+		childs[i].addEventListener("click",color);
+	}	
+	function color()
+	{
+		heading.innerHTML=this.innerHTML;
+	}
+	
+	function formfunc()
+	{
+
+//		var num=/^[0-9]+$/;
+		var fname= document.getElementById("namefirst").value;
+
+		alert(fname);
+//
+//		if(fname=="")
+//		{
+//			alert("Please Enter Your Name");
+//			return false;
+//		}
+//		else if (fname.includes("num")){
+//			alert("Invalid Name");
+//			return false;
+//		}
+//		if(isNON(number) || !( number>1 && number<10))//variable is not a number ,as type is number so this func doesn't work here
+//		{
+//			alert("Number must be between 1 and 10");
+//			return false;
+//		}
+//		if(cell.validity.patternMismatch)
+//		{
+//			alert("patternMismatch");
+//			return false;
+//		}
+
+	}
+</script>
+<script type="text/javascript" src="jquery-3.4.1.js"></script>
+<script type="text/javascript" src="popper.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+</body>
+</html> 	
