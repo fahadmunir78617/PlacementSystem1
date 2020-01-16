@@ -445,7 +445,25 @@ Get our Jobs
                 </div>
                 <div class="col-md-3">
                     <div class="bg-jobs-inner" style="position: relative;">
-                        <a href="#"><img src="images/fsd-8-bazar-780x405.jpg" width="100%" class="rounded" height="150"></a>
+
+                        <?php
+                        if (isset($_SESSION['fname'])) {
+                            ?>
+
+                            <a href="frontpagecityresult.php?city=Faisalabad"><img src="images/fsd-8-bazar-780x405.jpg" width="100%" class="rounded" height="150"></a>
+                            <?php
+                        }
+
+                        else {
+                            ?>
+                            <a href="javascript:void(0)"onclick="message()"><img src="images/fsd-8-bazar-780x405.jpg"
+                                                                                 width="100%" class="rounded"
+                                                                                 height="150"></a>
+                            <?php
+                        }
+                        ?>
+
+
                         <div class="bg-jobs-outer" style="position: absolute;
     top: 50%;left: 50%;transform: translate(-50%,-50%);">
                             <a href="#"><h3>Faisalabad</h3></a>
