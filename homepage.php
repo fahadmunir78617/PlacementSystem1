@@ -412,7 +412,7 @@ Get our Jobs
     ===================================== -->
     <section>
         <div class="text-center">
-            <h1>Jobs According to City</h1>
+            <h1>Jobs According to Cities</h1>
             <hr style="background: black;width: 200px;height: 4px;">
         </div>
         <br><br>
