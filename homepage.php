@@ -466,7 +466,7 @@ Get our Jobs
 
                         <div class="bg-jobs-outer" style="position: absolute;
     top: 50%;left: 50%;transform: translate(-50%,-50%);">
-                            <a href="#"><h3>Faisalabad</h3></a>
+                            <a href="#"><h3>Faisalaba</h3></a>
                         </div>
                     </div>
                 </div>
