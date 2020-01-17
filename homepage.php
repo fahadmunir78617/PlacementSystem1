@@ -133,7 +133,7 @@ include "dbcon.php";
 
 
 </head>
-<body>
+<div>
 
 <!-- PRE LOADER -->
 <section class="preloader">
@@ -320,7 +320,7 @@ Get our Jobs
 
 <!-- ABOUT -->
 <br><br><br><br><br><br>
-<div class="container" id="about">
+<div class="" id="about">
     <div class="text-center">
         <h1>About Us</h1>
         <hr style="background: black;width: 150px;height: 4px;">
@@ -400,7 +400,7 @@ Get our Jobs
             },
         });
     </script>
-
+</div>
     <!-- Wrapper for slides -->
 
     <br><br>
@@ -416,7 +416,7 @@ Get our Jobs
             <hr style="background: black;width: 200px;height: 4px;">
         </div>
         <br><br>
-        <div class="container">
+
             <!-- portion 1 -->
             <div class="row">
                 <div class="col-md-3">
@@ -530,7 +530,7 @@ Get our Jobs
                 </div>
             </div>
             <!-- =========== -->
-        </div>
+
     </section>
 
     <br><br>
@@ -544,7 +544,7 @@ Get our Jobs
             <hr style="background: black;width: 200px;height: 4px;">
         </div>
         <br><br>
-        <div class="container">
+
             <div class="row">
                 <div class="col-md-3">
                     <div class="bg-jobs-inner" style="position: relative;">
@@ -583,7 +583,7 @@ Get our Jobs
                     </div>
                 </div>
             </div>
-        </div>
+
     </section>
     <br><br><br>
     <!-- ===========================================
@@ -596,7 +596,7 @@ Get our Jobs
 
         </div>
         <br>
-        <div class="container">
+<div class="container">
             <div class="row">
                 <div class="col-md-6">
                     <h4>Download the food you love</h4>
@@ -620,18 +620,19 @@ Get our Jobs
                     <img src="images/mobile-app.png" width="100%" height="auto">
                 </div>
             </div>
-        </div>
+</div>
     </section>
     <br><br>
     <!-- ========================================================================= -->
 
     <section class="feed-back" style="background:#39495D;">
-        <div class="container">
+
             <div class="text-center text-white pt-4">
                 <h1>What Our Clients Says</h1>
 
             </div>
             <br><br>
+        <div class="container">
             <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
@@ -695,46 +696,28 @@ Get our Jobs
 
     <br><br><br>
     <!-- FOOTER -->
-    <footer class="" style="background: #000000;>
+    <section class="footer" style="background: #003580;">
+   <div class="container">
+    <div class="row">
+        <div class="col-md-2">
+            <div class="footer-ul  pt-5">
+                <ul class="list-unstyled">
+                    <li><a href="homepage.php">Home</a></li>
+                    <li><a href="privacypolicy.php">Privacy Policy</a></li>
+                    <li><a href="termscondtion.php">Terms & Condition</a></li>
 
-        <br><br><br>
-        <br>
-
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="footer-ul">
-                        <ul>
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">About</a></li>
-                            <li><a href="#contact">Contact</a></li>
-
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-md-4"></div>
-                <div class="col-md-4">
-                    <ul class="footer-social-1" style="list-style: none;">
-                        <li><a href="#"><i class="fa fa-map-marker pr-4 text-danger" aria-hidden="true"></i></a><span>Khokar Chownk Near Imporium Mall, Lahore</span>
-                        </li>
-                        <li><a href="#"><i class="fa fa-phone pr-4 text-danger" aria-hidden="true"></i>+9234645454</a>
-                        </li>
-                    </ul>
-                    <div class="ml-5">
-                        <span class="pr-3"><a href="#"><i class="fa fa-whatsapp text-danger"
-                                                          aria-hidden="true"></i></a></li></span>
-                        <span class="pr-3"><a href="#"><i class="fa fa-youtube-play text-danger" aria-hidden="true"></i></a></span>
-
-                        <span class="pr-3"><a href="#"><i class="fa fa-facebook text-danger" aria-hidden="true"></i></a></span>
-                    </div>
-
-                </div>
-            </div>
-            <div class="text-center">
-                <p style="color:#fff;">&copy; All reserved by Raazaq</p>
+                </ul>
             </div>
         </div>
-    </footer>
+        <div class="col-md-4">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3403.0914658314!2d74.273881!3d31.466670000000004!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xd5bc55084fb2f34e!2sMuqit%20Services%20Pvt%20Ltd!5e0!3m2!1sen!2sus!4v1579247812520!5m2!1sen!2sus" width="100%" height="auto" frameborder="0" style="border:0;padding-top: 20px;" allowfullscreen=""></iframe>
+        </div>
+        <div class="col-md-6">
+
+        </div>
+    </div>
+</div>
+    </section>
 
 
     <!-- <script src="js/custom.js"></script> -->
