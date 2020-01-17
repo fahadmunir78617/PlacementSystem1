@@ -93,7 +93,7 @@ if(isset($_POST['apply']))
 
                     <div class="flex-row row">
 
-                        <div class="col-md-4"></div>
+
                         <?php
                         $ids = $_GET['city'];
                         $sql = "SELECT * FROM company WHERE ccity LIKE '%$ids%' Order By cname ASC";
@@ -124,7 +124,7 @@ if(isset($_POST['apply']))
                                         <!-- /.caption -->
                                     </div>
                                     <!-- /.thumbnail -->
-                                    <div class="col-md-4"></div>
+
                                 </div>
 
 
