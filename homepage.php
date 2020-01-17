@@ -466,13 +466,31 @@ Get our Jobs
 
                         <div class="bg-jobs-outer" style="position: absolute;
     top: 50%;left: 50%;transform: translate(-50%,-50%);">
-                            <a href="#"><h3>Faisalaba</h3></a>
+                            <a href="#"><h3>Faisalabad</h3></a>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-3">
                     <div class="bg-jobs-inner" style="position: relative;">
-                        <a href="#"><img src="images/karachi.jpg" width="100%" class="rounded" height="150"></a>
+
+                        <?php
+                        if (isset($_SESSION['fname'])) {
+                            ?>
+
+                            <a href="frontpagecityresult.php?city=Karachi"><img src="images/karachi.jpg" width="100%" class="rounded" height="150"></a>
+                            <?php
+                        }
+
+                        else {
+                            ?>
+                            <a href="javascript:void(0)"onclick="message()"><img src="images/karachi.jpg"
+                                                                                 width="100%" class="rounded"
+                                                                                 height="150"></a>
+                            <?php
+                        }
+                        ?>
+
+
                         <div class="bg-jobs-outer" style="position: absolute;
     top: 50%;left: 50%;transform: translate(-50%,-50%);">
                             <a href="#"><h3>Karachi</h3></a>
@@ -481,7 +499,25 @@ Get our Jobs
                 </div>
                 <div class="col-md-3">
                     <div class="bg-jobs-inner" style="position: relative;">
-                        <a href="#"><img src="images/mosque.jpg" width="100%" class="rounded" height="150"></a>
+
+                        <?php
+                        if (isset($_SESSION['fname'])) {
+                            ?>
+
+                            <a href="frontpagecityresult.php?city=Lahore"><img src="images/mosque.jpg" width="100%" class="rounded" height="150"></a>
+                            <?php
+                        }
+
+                        else {
+                            ?>
+                            <a href="javascript:void(0)"onclick="message()"><img src="images/mosque.jpg"
+                                                                                 width="100%" class="rounded"
+                                                                                 height="150"></a>
+                            <?php
+                        }
+                        ?>
+
+
                         <div class="bg-jobs-outer" style="position: absolute;
     top: 50%;left: 50%;transform: translate(-50%,-50%);">
                             <a href="#"><h3>Lahore</h3></a>
@@ -494,7 +530,23 @@ Get our Jobs
             <div class="row">
                 <div class="col-md-3">
                     <div class="bg-jobs-inner" style="position: relative;">
-                        <a href="#"><img src="images/multan.jpg" width="100%" class="rounded" height="150"></a>
+
+                        <?php
+                        if (isset($_SESSION['fname'])) {
+                            ?>
+
+                            <a href="frontpagecityresult.php?city=Multan"><img src="images/multan.jpg" width="100%" class="rounded" height="150"></a>
+                            <?php
+                        }
+
+                        else {
+                            ?>
+                            <a href="javascript:void(0)"onclick="message()"><img src="images/multan.jpg"
+                                                                                 width="100%" class="rounded"
+                                                                                 height="150"></a>
+                            <?php
+                        }
+                        ?>
                         <div class="bg-jobs-outer" style="position: absolute;
     top: 50%;left: 50%;transform: translate(-50%,-50%);">
                             <a href="#"><h3>Multan</h3></a>
@@ -503,7 +555,23 @@ Get our Jobs
                 </div>
                 <div class="col-md-3">
                     <div class="bg-jobs-inner" style="position: relative;">
-                        <a href="#"><img src="images/Shah-Faisal-Masjid.jpg" width="100%" class="rounded" height="150"></a>
+                        <?php
+                        if (isset($_SESSION['fname'])) {
+                            ?>
+
+                            <a href="frontpagecityresult.php?city=Islamabad"><img src="images/Shah-Faisal-Masjid.jpg" width="100%" class="rounded" height="150"></a>
+                            <?php
+                        }
+
+                        else {
+                            ?>
+                            <a href="javascript:void(0)"onclick="message()"><img src="images/Shah-Faisal-Masjid.jpg"
+                                                                                 width="100%" class="rounded"
+                                                                                 height="150"></a>
+                            <?php
+                        }
+                        ?>
+
                         <div class="bg-jobs-outer" style="position: absolute;
     top: 50%;left: 50%;transform: translate(-50%,-50%);">
                             <a href="#"><h3>Isalamabad</h3></a>
@@ -512,7 +580,23 @@ Get our Jobs
                 </div>
                 <div class="col-md-3">
                     <div class="bg-jobs-inner" style="position: relative;">
-                        <a href="#"><img src="images/sargodha.jpg" width="100%" class="rounded" height="150"></a>
+                        <?php
+                        if (isset($_SESSION['fname'])) {
+                            ?>
+
+                            <a href="frontpagecityresult.php?city=sargodha"><img src="images/sargodha.jpg" width="100%" class="rounded" height="150"></a>
+                            <?php
+                        }
+
+                        else {
+                            ?>
+                            <a href="javascript:void(0)"onclick="message()"><img src="images/sargodha.jpg"
+                                                                                 width="100%" class="rounded"
+                                                                                 height="150"></a>
+                            <?php
+                        }
+                        ?>
+
                         <div class="bg-jobs-outer" style="position: absolute;
     top: 50%;left: 50%;transform: translate(-50%,-50%);">
                             <a href="#"><h3>Sargodha</h3></a>
@@ -521,7 +605,23 @@ Get our Jobs
                 </div>
                 <div class="col-md-3">
                     <div class="bg-jobs-inner" style="position: relative;">
-                        <a href="#"><img src="images/Quetta.jpg" width="100%" class="rounded" height="150"></a>
+                        <?php
+                        if (isset($_SESSION['fname'])) {
+                            ?>
+
+                            <a href="frontpagecityresult.php?city=Quetta"><img src="images/Quetta.jpg" width="100%" class="rounded" height="150"></a>
+                            <?php
+                        }
+
+                        else {
+                            ?>
+                            <a href="javascript:void(0)"onclick="message()"><img src="images/Quetta.jpg"
+                                                                                 width="100%" class="rounded"
+                                                                                 height="150"></a>
+                            <?php
+                        }
+                        ?>
+
                         <div class="bg-jobs-outer" style="position: absolute;
     top: 50%;left: 50%;transform: translate(-50%,-50%);">
                             <a href="#"><h3>Quetta</h3></a>
