@@ -560,7 +560,7 @@ include "dbcon.php";
                     <a href="#"><img src="images/web.jpg" width="100%" class="rounded"></a>
                     <div class="bg-jobs-outer" style="position: absolute;
     top: 50%;left: 50%;transform: translate(-50%,-50%);">
-                        <h3 style="font-size: 22px;">Web Development</h3>
+                        <h3 style="font-size: 22px;">Webssss Development</h3>
                     </div>
                 </div>
             </div>
