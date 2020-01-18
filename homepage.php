@@ -133,7 +133,7 @@ include "dbcon.php";
 
 
 </head>
-<div>
+<body>
 
     <!-- PRE LOADER -->
     <section class="preloader">
