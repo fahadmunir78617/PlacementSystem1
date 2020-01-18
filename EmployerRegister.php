@@ -6,7 +6,7 @@ include "dbcon.php";
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Register</title>
+    <title>Registers</title>
     <link rel="shortcut icon" type="image/png" href="images\favicon.ico"/>
     <link rel="stylesheet" type="text/css" href="css\style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
