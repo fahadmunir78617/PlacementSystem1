@@ -135,272 +135,272 @@ include "dbcon.php";
 </head>
 <body>
 
-    <!-- PRE LOADER -->
-    <section class="preloader">
+<!-- PRE LOADER -->
+<section class="preloader">
 
-        <div class="spinner">
+    <div class="spinner">
 
-            <span class="spinner-rotate"></span>
+        <span class="spinner-rotate"></span>
 
-        </div>
-    </section>
-
-
-    <!-- MENU -->
-    <section>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container">
-                <a class="navbar-brand" href="#"><img src="images/razaq.png" width="50" height="auto"></a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
-                        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse text-center" id="navbarNavDropdown">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="#">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#about">About us</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#contact">Contact</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
-                               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Job Seeker
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-
-                                <?php
-                                if (isset($_SESSION['fname'])) { ?>
-                                    <a class="dropdown-item" href="Student/studenthomepage.php">Job Seeker Panel</a>
-
-                                    <?php
-                                }
-                                else {
-                                    ?>
-
-                                    <a class="dropdown-item" href="register.php">Register As Job Seeker</a>
-                                    <a class="dropdown-item" href="studentlogin.php">Login As Job Seeker</a>
-                                    <?php
-                                }
-                                ?>
-                            </div>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
-                               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Employer Accounts
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <a class="dropdown-item" href="adminlogin.php">Employer Login</a>
-                                <a class="dropdown-item" href="EmployerRegister.php">Employer Registration</a>
-
-                            </div>
-                        </li>
-
-                    </ul>
-
-                    <a class="nav-link" href="#contact" style=" font-weight: bold!important;"><span><?php
+    </div>
+</section>
 
 
-
-                            if (isset($_SESSION['name']))
-                            {
-                                echo 'Hello'.' '. $_SESSION['name'];
-                                ?>
-                                <a href="sessionDestroy.php" class="btn btn-success">Logout</a>
-
-                                <?php
-                            }
-
-                            else{
-
-                            }
-                            ?></span></a>
-
-
-
-                </div>
-            </div>
-        </nav>
-    </section>
-
-
-    <!-- Home -->
-    <section class="img-header-bg">
-        <div class="header-upper-content">
-            <h1 style="letter-spacing: 3px;">WE HELP YOU TO GET YOUR DREAM COME
-                <span class="text-warning" style="border-bottom: 2px solid red;"> TRUE!
-
-    </span>
-            </h1>
-        </div>
-    </section>
-    <br><br><br>
-    <!--=====================
-    Get our Jobs
-    ===========================-->
-    <section>
-
-
-
-
-
-
-
-
-
-        <div class="text-center">
-            <h1>Our Latest Jobs</h1>
-            <hr style="background: black;width: 200px;height: 4px;">
-        </div>
-        <br><br><br><br>
-
+<!-- MENU -->
+<section>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
+            <a class="navbar-brand" href="#"><img src="images/razaq.png" width="50" height="auto"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                    aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse text-center" id="navbarNavDropdown">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Job Seeker
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
 
-
-
-
-
-
-            <div class="row">
-                <?php
-
-
-                $sql = "SELECT * FROM company ORDER BY id DESC LIMIT 0, 6";
-
-
-                $result = $con->query($sql);
-
-
-
-                if($result->num_rows > 0)
-                {
-                    while($row = $result->fetch_assoc())
-                    {
-                        ?>
-                        <div class="col-md-2 text-center">
                             <?php
-                            if (isset($_SESSION['fname'])) {
-                                ?>
-                                <a href='frontpageclickresult.php?id=<?php echo $row['id'] ?>'> <img
-                                            src="images/<?php echo $row['clogo']; ?>" width="100%" height="180"></a>
+                            if (isset($_SESSION['fname'])) { ?>
+                                <a class="dropdown-item" href="Student/studenthomepage.php">Job Seeker Panel</a>
+
                                 <?php
                             }
-
                             else {
                                 ?>
 
-
-                                <a href = "javascript:void(0)"onclick="message()"> <img src="images/<?php echo $row['clogo']; ?>" width="100%" height="180"></a>
-
+                                <a class="dropdown-item" href="register.php">Register As Job Seeker</a>
+                                <a class="dropdown-item" href="studentlogin.php">Login As Job Seeker</a>
                                 <?php
-                            }?>
-
-                            <br>
-
-                            <span class="job-btn"> <?php echo substr($row['cname'],0,15); ?>  </span><br>
-                            <span class="job-btn"> <?php echo $row['ccity']; ?>
+                            }
+                            ?>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Employer Accounts
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="adminlogin.php">Employer Login</a>
+                            <a class="dropdown-item" href="EmployerRegister.php">Employer Registration</a>
 
                         </div>
+                    </li>
 
-                        <?php
-                    }
-                }
+                </ul>
 
-                ?>
+                <a class="nav-link" href="#contact" style=" font-weight: bold!important;"><span><?php
+
+
+
+                        if (isset($_SESSION['name']))
+                        {
+                            echo 'Hello'.' '. $_SESSION['name'];
+                            ?>
+                            <a href="sessionDestroy.php" class="btn btn-success">Logout</a>
+
+                            <?php
+                        }
+
+                        else{
+
+                        }
+                        ?></span></a>
+
+
+
             </div>
-
         </div>
-    </section>
+    </nav>
+</section>
 
 
-    <!-- ABOUT -->
-    <br><br><br><br><br><br>
-    <div class="" id="about">
-        <div class="text-center">
-            <h1>About Us</h1>
-            <hr style="background: black;width: 150px;height: 4px;">
-        </div>
-        <br><br><br><br>
-        <div class="swiper-container">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <div class="row">
-                        <div class="col-md-3">
-                            <iframe width="100%" height="auto" src="https://www.youtube.com/embed/O3-irUSBfkE"
-                                    frameborder="0"
-                                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                                    allowfullscreen></iframe>
-                        </div>
-                        <div class="col-md-3">
-                            <iframe width="100%" height="auto" src="https://www.youtube.com/embed/O3-irUSBfkE"
-                                    frameborder="0"
-                                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                                    allowfullscreen></iframe>
-                        </div>
-                        <div class="col-md-3">
-                            <iframe width="100%" height="auto" src="https://www.youtube.com/embed/O3-irUSBfkE"
-                                    frameborder="0"
-                                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                                    allowfullscreen></iframe>
-                        </div>
-                        <div class="col-md-3">
-                            <iframe width="100%" height="auto" src="https://www.youtube.com/embed/O3-irUSBfkE"
-                                    frameborder="0"
-                                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                                    allowfullscreen></iframe>
-                        </div>
-                    </div>
+<!-- Home -->
+<section class="img-header-bg">
+    <div class="header-upper-content">
+        <h1 style="letter-spacing: 3px;">WE HELP YOU TO GET YOUR DREAM COME
+            <span class="text-warning" style="border-bottom: 2px solid red;"> TRUE!
 
-                </div>
-                <div class="swiper-slide">
-                    <div class="row">
-                        <div class="col-md-3">
-                            <iframe width="100%" height="auto" src="https://www.youtube.com/embed/O3-irUSBfkE"
-                                    frameborder="0"
-                                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                                    allowfullscreen></iframe>
-                        </div>
-                        <div class="col-md-3">
-                            <iframe width="100%" height="auto" src="https://www.youtube.com/embed/O3-irUSBfkE"
-                                    frameborder="0"
-                                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                                    allowfullscreen></iframe>
-                        </div>
-                        <div class="col-md-3">
-                            <iframe width="100%" height="auto" src="https://www.youtube.com/embed/O3-irUSBfkE"
-                                    frameborder="0"
-                                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                                    allowfullscreen></iframe>
-                        </div>
-                        <div class="col-md-3">
-                            <iframe width="100%" height="auto" src="https://www.youtube.com/embed/O3-irUSBfkE"
-                                    frameborder="0"
-                                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                                    allowfullscreen></iframe>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Add Arrows -->
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
-        </div>
-        <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
-        <!-- Initialize Swiper -->
-        <script>
-            var swiper = new Swiper('.swiper-container', {
-                navigation: {
-                    nextEl: '.swiper-button-next',
-                    prevEl: '.swiper-button-prev',
-                },
-            });
-        </script>
+    </span>
+        </h1>
     </div>
+</section>
+<br><br><br>
+<!--=====================
+Get our Jobs
+===========================-->
+<section>
+
+
+
+
+
+
+
+
+
+    <div class="text-center">
+        <h1>Our Latest Jobs</h1>
+        <hr style="background: black;width: 200px;height: 4px;">
+    </div>
+    <br><br><br><br>
+
+    <div class="container">
+
+
+
+
+
+
+        <div class="row">
+            <?php
+
+
+            $sql = "SELECT * FROM company ORDER BY id DESC LIMIT 0, 6";
+
+
+            $result = $con->query($sql);
+
+
+
+            if($result->num_rows > 0)
+            {
+                while($row = $result->fetch_assoc())
+                {
+                    ?>
+                    <div class="col-md-2 text-center">
+                        <?php
+                        if (isset($_SESSION['fname'])) {
+                            ?>
+                            <a href='frontpageclickresult.php?id=<?php echo $row['id'] ?>'> <img
+                                        src="images/<?php echo $row['clogo']; ?>" width="100%" height="180"></a>
+                            <?php
+                        }
+
+                        else {
+                            ?>
+
+
+                            <a href = "javascript:void(0)"onclick="message()"> <img src="images/<?php echo $row['clogo']; ?>" width="100%" height="180"></a>
+
+                            <?php
+                        }?>
+
+                        <br>
+
+                        <span class="job-btn"> <?php echo substr($row['cname'],0,15); ?>  </span><br>
+                        <span class="job-btn"> <?php echo $row['ccity']; ?>
+
+                    </div>
+
+                    <?php
+                }
+            }
+
+            ?>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- ABOUT -->
+<br><br><br><br><br><br>
+<div class="container" id="about">
+    <div class="text-center">
+        <h1>About Us</h1>
+        <hr style="background: black;width: 150px;height: 4px;">
+    </div>
+    <br><br><br><br>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="row">
+                    <div class="col-md-3">
+                        <iframe width="100%" height="auto" src="https://www.youtube.com/embed/O3-irUSBfkE"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                    </div>
+                    <div class="col-md-3">
+                        <iframe width="100%" height="auto" src="https://www.youtube.com/embed/O3-irUSBfkE"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                    </div>
+                    <div class="col-md-3">
+                        <iframe width="100%" height="auto" src="https://www.youtube.com/embed/O3-irUSBfkE"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                    </div>
+                    <div class="col-md-3">
+                        <iframe width="100%" height="auto" src="https://www.youtube.com/embed/O3-irUSBfkE"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                    </div>
+                </div>
+
+            </div>
+            <div class="swiper-slide">
+                <div class="row">
+                    <div class="col-md-3">
+                        <iframe width="100%" height="auto" src="https://www.youtube.com/embed/O3-irUSBfkE"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                    </div>
+                    <div class="col-md-3">
+                        <iframe width="100%" height="auto" src="https://www.youtube.com/embed/O3-irUSBfkE"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                    </div>
+                    <div class="col-md-3">
+                        <iframe width="100%" height="auto" src="https://www.youtube.com/embed/O3-irUSBfkE"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                    </div>
+                    <div class="col-md-3">
+                        <iframe width="100%" height="auto" src="https://www.youtube.com/embed/O3-irUSBfkE"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Add Arrows -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+    <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    </script>
+
     <!-- Wrapper for slides -->
 
     <br><br>
@@ -416,121 +416,121 @@ include "dbcon.php";
             <hr style="background: black;width: 200px;height: 4px;">
         </div>
         <br><br>
-
-        <!-- portion 1 -->
-        <div class="row">
-            <div class="col-md-3">
-                <div class="bg-jobs-inner" style="position: relative;">
-                    <?php
-                    if (isset($_SESSION['fname'])) {
-                        ?>
-
-                        <a href="frontpagecityresult.php?city=Gujranwala"><img src="images/Gujranwala.jpg" width="100%" class="rounded" height="150"></a>
+        <div class="container">
+            <!-- portion 1 -->
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="bg-jobs-inner" style="position: relative;">
                         <?php
-                    }
+                        if (isset($_SESSION['fname'])) {
+                            ?>
 
-                    else {
+                            <a href="frontpagecityresult.php?city=Gujranwala"><img src="images/Gujranwala.jpg" width="100%" class="rounded" height="150"></a>
+                            <?php
+                        }
+
+                        else {
+                            ?>
+                            <a href="javascript:void(0)"onclick="message()"><img src="images/Gujranwala.jpg"
+                                                                                 width="100%" class="rounded"
+                                                                                 height="150"></a>
+                            <?php
+                        }
                         ?>
-                        <a href="javascript:void(0)"onclick="message()"><img src="images/Gujranwala.jpg"
-                                                                             width="100%" class="rounded"
-                                                                             height="150"></a>
-                        <?php
-                    }
-                    ?>
-                    <div class="bg-jobs-outer" style="position: absolute;
+                        <div class="bg-jobs-outer" style="position: absolute;
     top: 50%;left: 50%;transform: translate(-50%,-50%);">
-                        <a href="#"><h3>Gujranwala</h3></a>
+                            <a href="#"><h3>Gujranwala</h3></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="bg-jobs-inner" style="position: relative;">
+
+                        <?php
+                        if (isset($_SESSION['fname'])) {
+                            ?>
+
+                            <a href="frontpagecityresult.php?city=Faisalabad"><img src="images/fsd-8-bazar-780x405.jpg" width="100%" class="rounded" height="150"></a>
+                            <?php
+                        }
+
+                        else {
+                            ?>
+                            <a href="javascript:void(0)"onclick="message()"><img src="images/fsd-8-bazar-780x405.jpg"
+                                                                                 width="100%" class="rounded"
+                                                                                 height="150"></a>
+                            <?php
+                        }
+                        ?>
+
+
+                        <div class="bg-jobs-outer" style="position: absolute;
+    top: 50%;left: 50%;transform: translate(-50%,-50%);">
+                            <a href="#"><h3>Faisalabad</h3></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="bg-jobs-inner" style="position: relative;">
+                        <a href="#"><img src="images/karachi.jpg" width="100%" class="rounded" height="150"></a>
+                        <div class="bg-jobs-outer" style="position: absolute;
+    top: 50%;left: 50%;transform: translate(-50%,-50%);">
+                            <a href="#"><h3>Karachi</h3></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="bg-jobs-inner" style="position: relative;">
+                        <a href="#"><img src="images/mosque.jpg" width="100%" class="rounded" height="150"></a>
+                        <div class="bg-jobs-outer" style="position: absolute;
+    top: 50%;left: 50%;transform: translate(-50%,-50%);">
+                            <a href="#"><h3>Lahore</h3></a>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-3">
-                <div class="bg-jobs-inner" style="position: relative;">
-
-                    <?php
-                    if (isset($_SESSION['fname'])) {
-                        ?>
-
-                        <a href="frontpagecityresult.php?city=Faisalabad"><img src="images/fsd-8-bazar-780x405.jpg" width="100%" class="rounded" height="150"></a>
-                        <?php
-                    }
-
-                    else {
-                        ?>
-                        <a href="javascript:void(0)"onclick="message()"><img src="images/fsd-8-bazar-780x405.jpg"
-                                                                             width="100%" class="rounded"
-                                                                             height="150"></a>
-                        <?php
-                    }
-                    ?>
-
-
-                    <div class="bg-jobs-outer" style="position: absolute;
+            <br>
+            <!-- portion 2 -->
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="bg-jobs-inner" style="position: relative;">
+                        <a href="#"><img src="images/multan.jpg" width="100%" class="rounded" height="150"></a>
+                        <div class="bg-jobs-outer" style="position: absolute;
     top: 50%;left: 50%;transform: translate(-50%,-50%);">
-                        <a href="#"><h3>Faisalabad</h3></a>
+                            <a href="#"><h3>Multan</h3></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="bg-jobs-inner" style="position: relative;">
+                        <a href="#"><img src="images/Shah-Faisal-Masjid.jpg" width="100%" class="rounded" height="150"></a>
+                        <div class="bg-jobs-outer" style="position: absolute;
+    top: 50%;left: 50%;transform: translate(-50%,-50%);">
+                            <a href="#"><h3>Isalamabad</h3></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="bg-jobs-inner" style="position: relative;">
+                        <a href="#"><img src="images/sargodha.jpg" width="100%" class="rounded" height="150"></a>
+                        <div class="bg-jobs-outer" style="position: absolute;
+    top: 50%;left: 50%;transform: translate(-50%,-50%);">
+                            <a href="#"><h3>Sargodha</h3></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="bg-jobs-inner" style="position: relative;">
+                        <a href="#"><img src="images/Quetta.jpg" width="100%" class="rounded" height="150"></a>
+                        <div class="bg-jobs-outer" style="position: absolute;
+    top: 50%;left: 50%;transform: translate(-50%,-50%);">
+                            <a href="#"><h3>Quetta</h3></a>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-3">
-                <div class="bg-jobs-inner" style="position: relative;">
-                    <a href="#"><img src="images/karachi.jpg" width="100%" class="rounded" height="150"></a>
-                    <div class="bg-jobs-outer" style="position: absolute;
-    top: 50%;left: 50%;transform: translate(-50%,-50%);">
-                        <a href="#"><h3>Karachi</h3></a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="bg-jobs-inner" style="position: relative;">
-                    <a href="#"><img src="images/mosque.jpg" width="100%" class="rounded" height="150"></a>
-                    <div class="bg-jobs-outer" style="position: absolute;
-    top: 50%;left: 50%;transform: translate(-50%,-50%);">
-                        <a href="#"><h3>Lahore</h3></a>
-                    </div>
-                </div>
-            </div>
+            <!-- =========== -->
         </div>
-        <br>
-        <!-- portion 2 -->
-        <div class="row">
-            <div class="col-md-3">
-                <div class="bg-jobs-inner" style="position: relative;">
-                    <a href="#"><img src="images/multan.jpg" width="100%" class="rounded" height="150"></a>
-                    <div class="bg-jobs-outer" style="position: absolute;
-    top: 50%;left: 50%;transform: translate(-50%,-50%);">
-                        <a href="#"><h3>Multan</h3></a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="bg-jobs-inner" style="position: relative;">
-                    <a href="#"><img src="images/Shah-Faisal-Masjid.jpg" width="100%" class="rounded" height="150"></a>
-                    <div class="bg-jobs-outer" style="position: absolute;
-    top: 50%;left: 50%;transform: translate(-50%,-50%);">
-                        <a href="#"><h3>Isalamabad</h3></a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="bg-jobs-inner" style="position: relative;">
-                    <a href="#"><img src="images/sargodha.jpg" width="100%" class="rounded" height="150"></a>
-                    <div class="bg-jobs-outer" style="position: absolute;
-    top: 50%;left: 50%;transform: translate(-50%,-50%);">
-                        <a href="#"><h3>Sargodha</h3></a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="bg-jobs-inner" style="position: relative;">
-                    <a href="#"><img src="images/Quetta.jpg" width="100%" class="rounded" height="150"></a>
-                    <div class="bg-jobs-outer" style="position: absolute;
-    top: 50%;left: 50%;transform: translate(-50%,-50%);">
-                        <a href="#"><h3>Quetta</h3></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- =========== -->
-
     </section>
 
     <br><br>
@@ -544,46 +544,46 @@ include "dbcon.php";
             <hr style="background: black;width: 200px;height: 4px;">
         </div>
         <br><br>
-
-        <div class="row">
-            <div class="col-md-3">
-                <div class="bg-jobs-inner" style="position: relative;">
-                    <a href="#"><img src="images/Marketing-strategy.jpg" width="100%" class="rounded"></a>
-                    <div class="bg-jobs-outer" style="position: absolute;
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="bg-jobs-inner" style="position: relative;">
+                        <a href="#"><img src="images/Marketing-strategy.jpg" width="100%" class="rounded"></a>
+                        <div class="bg-jobs-outer" style="position: absolute;
     top: 50%;left: 50%;transform: translate(-50%,-50%);">
-                        <h3>Marketing</h3>
+                            <h3>Marketing</h3>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-3">
-                <div class="bg-jobs-inner" style="position: relative;">
-                    <a href="#"><img src="images/web.jpg" width="100%" class="rounded"></a>
-                    <div class="bg-jobs-outer" style="position: absolute;
+                <div class="col-md-3">
+                    <div class="bg-jobs-inner" style="position: relative;">
+                        <a href="#"><img src="images/web.jpg" width="100%" class="rounded"></a>
+                        <div class="bg-jobs-outer" style="position: absolute;
     top: 50%;left: 50%;transform: translate(-50%,-50%);">
-                        <h3 style="font-size: 22px;">Webssss Development</h3>
+                            <h3 style="font-size: 22px;">Web Development</h3>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-3">
-                <div class="bg-jobs-inner" style="position: relative;">
-                    <a href="#"><img src="images/android-development-services.jpg" width="100%" class="rounded"></a>
-                    <div class="bg-jobs-outer" style="position: absolute;
+                <div class="col-md-3">
+                    <div class="bg-jobs-inner" style="position: relative;">
+                        <a href="#"><img src="images/android-development-services.jpg" width="100%" class="rounded"></a>
+                        <div class="bg-jobs-outer" style="position: absolute;
     top: 50%;left: 50%;transform: translate(-50%,-50%);">
-                        <h3 style="font-size: 22px;">billa Development</h3>
+                            <h3 style="font-size: 22px;">Android Development</h3>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-3">
-                <div class="bg-jobs-inner" style="position: relative;">
-                    <a href="#"><img src="images/seo.jpg" width="100%" class="rounded"></a>
-                    <div class="bg-jobs-outer" style="position: absolute;
+                <div class="col-md-3">
+                    <div class="bg-jobs-inner" style="position: relative;">
+                        <a href="#"><img src="images/seo.jpg" width="100%" class="rounded"></a>
+                        <div class="bg-jobs-outer" style="position: absolute;
     top: 50%;left: 50%;transform: translate(-50%,-50%);">
-                        <h3>SEO</h3>
+                            <h3>SEO</h3>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-
     </section>
     <br><br><br>
     <!-- ===========================================
@@ -626,13 +626,12 @@ include "dbcon.php";
     <!-- ========================================================================= -->
 
     <section class="feed-back" style="background:#39495D;">
-
-        <div class="text-center text-white pt-4">
-            <h1>What Our Clients Says</h1>
-
-        </div>
-        <br><br>
         <div class="container">
+            <div class="text-center text-white pt-4">
+                <h1>What Our Clients Says</h1>
+
+            </div>
+            <br><br>
             <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
@@ -696,47 +695,65 @@ include "dbcon.php";
 
     <br><br><br>
     <!-- FOOTER -->
-    <section class="footer" style="background: #003580;">
+    <footer class="" style="background: #000000;>
+
+        <br><br><br>
+        <br>
+
         <div class="container">
-            <div class="row">
-                <div class="col-md-2">
-                    <div class="footer-ul  pt-5">
-                        <ul class="list-unstyled">
-                            <li><a href="homepage.php">Home</a></li>
-                            <li><a href="privacypolicy.php">Privacy Policy</a></li>
-                            <li><a href="termscondtion.php">Terms & Condition</a></li>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="footer-ul">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
 
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3403.0914658314!2d74.273881!3d31.466670000000004!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xd5bc55084fb2f34e!2sMuqit%20Services%20Pvt%20Ltd!5e0!3m2!1sen!2sus!4v1579247812520!5m2!1sen!2sus" width="100%" height="auto" frameborder="0" style="border:0;padding-top: 20px;" allowfullscreen=""></iframe>
-                </div>
-                <div class="col-md-6">
-
-                </div>
+                </ul>
             </div>
         </div>
-    </section>
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+            <ul class="footer-social-1" style="list-style: none;">
+                <li><a href="#"><i class="fa fa-map-marker pr-4 text-danger" aria-hidden="true"></i></a><span>Khokar Chownk Near Imporium Mall, Lahore</span>
+                </li>
+                <li><a href="#"><i class="fa fa-phone pr-4 text-danger" aria-hidden="true"></i>+9234645454</a>
+                </li>
+            </ul>
+            <div class="ml-5">
+                        <span class="pr-3"><a href="#"><i class="fa fa-whatsapp text-danger"
+                                                          aria-hidden="true"></i></a></li></span>
+                <span class="pr-3"><a href="#"><i class="fa fa-youtube-play text-danger" aria-hidden="true"></i></a></span>
+
+                <span class="pr-3"><a href="#"><i class="fa fa-facebook text-danger" aria-hidden="true"></i></a></span>
+            </div>
+
+        </div>
+    </div>
+    <div class="text-center">
+        <p style="color:#fff;">&copy; All reserved by Raazaq</p>
+    </div>
+</div>
+</footer>
 
 
-    <!-- <script src="js/custom.js"></script> -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-    <!--  -->
+<!-- <script src="js/custom.js"></script> -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<!--  -->
 
-    <script>
+<script>
 
-        function message()
-        {
-            var message = "you are not loged in";
-            alert(message);
-
-
-        }
+    function message()
+    {
+        var message = "you are not loged in";
+        alert(message);
 
 
-    </script>
-    </body>
+    }
+
+
+</script>
+</body>
 </html>
