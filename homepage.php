@@ -390,6 +390,7 @@ Get our Jobs
         <div class="swiper-button-next"></div>
         <div class="swiper-button-prev"></div>
     </div>
+
     <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
     <!-- Initialize Swiper -->
     <script>
@@ -400,7 +401,7 @@ Get our Jobs
             },
         });
     </script>
-
+</div>
     <!-- Wrapper for slides -->
 
     <br><br>
@@ -416,7 +417,7 @@ Get our Jobs
             <hr style="background: black;width: 200px;height: 4px;">
         </div>
         <br><br>
-        <div class="container">
+       <div class="container">
             <!-- portion 1 -->
             <div class="row">
                 <div class="col-md-3">
@@ -525,6 +526,7 @@ Get our Jobs
                     </div>
                 </div>
             </div>
+
             <br>
             <!-- portion 2 -->
             <div class="row">
@@ -629,8 +631,10 @@ Get our Jobs
                     </div>
                 </div>
             </div>
+        </div>
             <!-- =========== -->
         </div>
+
     </section>
 
     <br><br>
@@ -690,13 +694,12 @@ Get our Jobs
 
     DOWNLOAD OUR APPb
     ==================================================== -->
-    <section class="download-1" style="background: #F9F9F9;">
+    <section class="download-1 container" style="background: #F9F9F9;">
         <div class="text-center">
             <h1>Get Our App</h1>
 
         </div>
         <br>
-        <div class="container">
             <div class="row">
                 <div class="col-md-6">
                     <h4>Download the food you love</h4>
@@ -725,7 +728,7 @@ Get our Jobs
     <br><br>
     <!-- ========================================================================= -->
 
-    <section class="feed-back" style="background:#39495D;">
+    <section class="feed-back container" style="background:#39495D;">
         <div class="container">
             <div class="text-center text-white pt-4">
                 <h1>What Our Clients Says</h1>
@@ -800,7 +803,7 @@ Get our Jobs
         <br><br><br>
         <br>
 
-        <div class="container">
+        <div class="">
     <div class="row">
         <div class="col-md-4">
             <div class="footer-ul">
