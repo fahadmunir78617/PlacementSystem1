@@ -100,8 +100,11 @@ if(isset($_POST['apply']))
                         $result = $con->query($sql);
                         if($result->num_rows > 0)
                         {
+                            echo $result->num_rows;
+                            exit();
                             while($row = $result->fetch_assoc())
                             {
+
                                 ?>
                                 <div class="col-md-4">
 
@@ -133,6 +136,11 @@ if(isset($_POST['apply']))
 
                                 <?php
                             }
+                        }
+                        else{
+
+
+                            echo "<span style='color: white;font-size: 25px;padding-left: 460px'>no Job Foud for this city</span>";
                         }
                         ?>
 
