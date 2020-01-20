@@ -233,7 +233,7 @@ include "dbcon.php";
 <section class="img-header-bg">
     <div class="header-upper-content">
         <h1 style="letter-spacing: 3px;">WE HELP YOU TO GET YOUR DREAM COME
-            <span class="text-warning" style="border-bottom: 2px solid red;"> TRUE! develop
+            <span class="text-warning" style="border-bottom: 2px solid red;"> TRUE! developer
 
     </span>
         </h1>
@@ -688,7 +688,7 @@ Get our Jobs
     <br><br><br>
     <!-- ===========================================
 
-    DOWNLOAD OUR APP
+    DOWNLOAD OUR APPb
     ==================================================== -->
     <section class="download-1" style="background: #F9F9F9;">
         <div class="text-center">
