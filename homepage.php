@@ -664,7 +664,7 @@ Get our Jobs
                         <a href="#"><img src="images/web.jpg" width="100%" class="rounded"></a>
                         <div class="bg-jobs-outer" style="position: absolute;
     top: 50%;left: 50%;transform: translate(-50%,-50%);">
-                            <h3 style="font-size: 22px;">Web Development</h3>
+                            <h3 style="font-size: 20px;padding-right: 8px;">Web Development</h3>
                         </div>
                     </div>
                 </div>
@@ -673,11 +673,11 @@ Get our Jobs
                         <a href="#"><img src="images/android-development-services.jpg" width="100%" class="rounded"></a>
                         <div class="bg-jobs-outer" style="position: absolute;
     top: 50%;left: 50%;transform: translate(-50%,-50%);">
-                            <h3 style="font-size: 22px;">Android Development</h3>
+                            <h3 style="font-size: 20px;">Android Development</h3>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-3" style="padding-right: 0;">
                     <div class="bg-jobs-inner" style="position: relative;">
                         <a href="#"><img src="images/seo.jpg" width="100%" class="rounded"></a>
                         <div class="bg-jobs-outer" style="position: absolute;
@@ -694,7 +694,7 @@ Get our Jobs
 
     DOWNLOAD OUR APPb
     ==================================================== -->
-    <section class="download-1 container" style="background: #F9F9F9;">
+    <section class="container" style="background: #F9F9F9;">
         <div class="text-center">
             <h1>Get Our App</h1>
 
@@ -798,43 +798,52 @@ Get our Jobs
 
     <br><br><br>
     <!-- FOOTER -->
-    <footer class="" style="background: #000000;>
+    <footer class="" style="background: #182C61;">
 
         <br><br><br>
         <br>
 
-        <div class="">
+
+    <div class="container">
     <div class="row">
         <div class="col-md-4">
             <div class="footer-ul">
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><i class="fa fa-location-arrow text-white fa-md" aria-hidden="true"></i>
+                    </li><p class="text-light">
+                        963-L. First Floor,Main Boulevard, johar Town Lahore
+                    </p>
+                    <li><i class="fa fa-phone text-white fa-md" aria-hidden="true"></i>
+                      <span class="text-light"> +92 3302525039</span>
+                    </li>
+                    <br>
+                    <li><i class="fa fa-comments-o text-white fa-md" aria-hidden="true"></i>
+                       <span class="text-light"> info@razaaq.com
+                       </span>
+                    </li>
 
                 </ul>
             </div>
         </div>
-        <div class="col-md-4"></div>
         <div class="col-md-4">
-            <ul class="footer-social-1" style="list-style: none;">
-                <li><a href="#"><i class="fa fa-map-marker pr-4 text-danger" aria-hidden="true"></i></a><span>Khokar Chownk Near Imporium Mall, Lahore</span>
-                </li>
-                <li><a href="#"><i class="fa fa-phone pr-4 text-danger" aria-hidden="true"></i>+9234645454</a>
-                </li>
-            </ul>
-            <div class="ml-5">
-                        <span class="pr-3"><a href="#"><i class="fa fa-whatsapp text-danger"
-                                                          aria-hidden="true"></i></a></li></span>
-                <span class="pr-3"><a href="#"><i class="fa fa-youtube-play text-danger" aria-hidden="true"></i></a></span>
+            <div class="footer-ul">
+                <ul>
+                    <li><a href="homepage.php">Home</a></li>
+                    <li><a href="privacypolicy.php">Privacy Policy</a></li>
+                    <li><a href="termscondtion.php">Terms & Conditions</a></li>
 
-                <span class="pr-3"><a href="#"><i class="fa fa-facebook text-danger" aria-hidden="true"></i></a></span>
+                </ul>
             </div>
-
+        </div>
+        <div class="col-md-4">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3403.0914658314!2d74.273881!3d31.466670000000004!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xd5bc55084fb2f34e!2sMuqit%20Services%20Pvt%20Ltd!5e0!3m2!1sen!2sus!4v1579521304816!5m2!1sen!2sus" width="100%" height="auto" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
         </div>
     </div>
     <div class="text-center">
-        <p style="color:#fff;">&copy; All reserved by Raazaq</p>
+       <span><a href="#" class="text-light"><i class="fa fa-facebook  fa-lg" aria-hidden="true"></i></a>
+</span><span><a href="#" class="text-light px-3"><i class="fa fa-whatsapp fa-lg" aria-hidden="true"></i></a>
+</span><span><a href="#" class="text-light"><i class="fa fa-instagram fa-lg" aria-hidden="true"></i></a>
+        </span>
     </div>
 </div>
 </footer>
