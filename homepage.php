@@ -652,37 +652,109 @@ Get our Jobs
             <div class="row">
                 <div class="col-md-3">
                     <div class="bg-jobs-inner" style="position: relative;">
-                        <a href="#"><img src="images/Marketing-strategy.jpg" width="100%" class="rounded"></a>
+
+
+                        <?php
+                        if (isset($_SESSION['fname'])) {
+                            ?>
+
+                            <a href="departmentsearch.php?city=Sales And Marketing"><img src="images/Marketing-strategy.jpg" width="100%" class="rounded" height="150"></a>
+                            <?php
+                        }
+
+                        else {
+                            ?>
+                            <a href="javascript:void(0)"onclick="message()"><img src="images/Marketing-strategy.jpg"
+                                                                                 width="100%" class="rounded"
+                                                                                 height="150"></a>
+                            <?php
+                        }
+                        ?>
+
+
+
                         <div class="bg-jobs-outer" style="position: absolute;
-    top: 50%;left: 50%;transform: translate(-50%,-50%);">
-                            <h3>Marketing</h3>
+    bottom: -10%;left: 20%;">
+                            <p class="text-white" style="font-size: 20px;">Sales And Marketing</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-3">
                     <div class="bg-jobs-inner" style="position: relative;">
-                        <a href="#"><img src="images/web.jpg" width="100%" class="rounded"></a>
+
+
+                        <?php
+                        if (isset($_SESSION['fname'])) {
+                            ?>
+
+                            <a href="departmentsearch.php?city=Web Development"><img src="images/web.jpg" width="100%" class="rounded" height="150"></a>
+                            <?php
+                        }
+
+                        else {
+                            ?>
+                            <a href="javascript:void(0)"onclick="message()"><img src="images/web.jpg"
+                                                                                 width="100%" class="rounded"
+                                                                                 height="150"></a>
+                            <?php
+                        }
+                        ?>
+
                         <div class="bg-jobs-outer" style="position: absolute;
-    top: 50%;left: 50%;transform: translate(-50%,-50%);">
-                            <h3 style="font-size: 20px;padding-right: 8px;">Web Development</h3>
+    left: 20%;bottom: -10%;">
+                            <p class="text-white" style="font-size: 20px;">Web Development</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-3">
                     <div class="bg-jobs-inner" style="position: relative;">
-                        <a href="#"><img src="images/android-development-services.jpg" width="100%" class="rounded"></a>
+
+
+                        <?php
+                        if (isset($_SESSION['fname'])) {
+                            ?>
+
+                            <a href="departmentsearch.php?city=Android Development"><img src="images/android-development-services.jpg" width="100%" class="rounded" height="150"></a>
+                            <?php
+                        }
+
+                        else {
+                            ?>
+                            <a href="javascript:void(0)"onclick="message()"><img src="images/android-development-services.jpg"
+                                                                                 width="100%" class="rounded"
+                                                                                 height="150"></a>
+                            <?php
+                        }
+                        ?>
                         <div class="bg-jobs-outer" style="position: absolute;
-    top: 50%;left: 50%;transform: translate(-50%,-50%);">
-                            <h3 style="font-size: 20px;">Android Development</h3>
+    bottom: -10%;left: 20%;">
+                            <p style="font-size: 20px;color: #fff;">Android Development</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-3" style="padding-right: 0;">
                     <div class="bg-jobs-inner" style="position: relative;">
-                        <a href="#"><img src="images/seo.jpg" width="100%" class="rounded"></a>
+
+                        <?php
+                        if (isset($_SESSION['fname'])) {
+                            ?>
+
+                            <a href="departmentsearch.php?city=seo"><img src="images/seo.jpg" width="100%" class="rounded" height="150"></a>
+                            <?php
+                        }
+
+                        else {
+                            ?>
+                            <a href="javascript:void(0)"onclick="message()"><img src="images/seo.jpg"
+                                                                                 width="100%" class="rounded"
+                                                                                 height="150"></a>
+                            <?php
+                        }
+                        ?>
+
                         <div class="bg-jobs-outer" style="position: absolute;
-    top: 50%;left: 50%;transform: translate(-50%,-50%);">
-                            <h3>SEO</h3>
+    bottom: -10%;left: 40%;">
+                            <p class="text-white" style="font-size: 20px;">SEO</p>
                         </div>
                     </div>
                 </div>
