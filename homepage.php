@@ -728,7 +728,7 @@ Get our Jobs
                         ?>
                         <div class="bg-jobs-outer" style="position: absolute;
     bottom: -10%;left: 20%;">
-                            <p style="font-size: 20px;color: #fff;">Android Development</p>
+                            <p style="font-size: 20px;color: #fff;">Android Developments</p>
                         </div>
                     </div>
                 </div>
