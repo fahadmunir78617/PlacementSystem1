@@ -112,7 +112,7 @@ if(isset($_POST['logout'])){
                                                     <br>Experience: <?php echo $row['cexperience']; ?> Years
 
                     </p>
-                    <p><a href="Edit.php?edit=<?php echo $row['id'];?>"><input type="button" class="btn btn-success"  Value="Edit Now" ></a>
+                    <p><a href="editjobdata.php?edit=<?php echo $row['id'];?>"><input type="button" class="btn btn-success"  Value="Edit Now" ></a>
                     <a href="Delete.php?edit=<?php echo $row['id'];?>"><input type="button" class="btn btn-danger"  Value="Delete Now" ></a></p>
 				</div>
 				<!-- /.caption -->
