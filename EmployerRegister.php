@@ -17,7 +17,7 @@ include "dbcon.php";
 </head>
 <body class="loginbody">
 
-<a href="homepage.php"><i class="fa fa-home" style="font-size:48px;color: rgba(193, 255, 226, 0.856);margin: 20px 0 0 30px;"></i></a>
+<a href="index.php"><i class="fa fa-home" style="font-size:48px;color: rgba(193, 255, 226, 0.856);margin: 20px 0 0 30px;"></i></a>
 <section class="preloader">
     <div class="spinner">
         <span class="spinner-rotate"></span>
@@ -121,7 +121,7 @@ include "dbcon.php";
                 if ($con->query($sql) == true)
                 {
                     $message = "Registered Successfully";
-                    echo "<script type='text/javascript'> alert('$message'); window.location.href='homepage.php';</script>";
+                    echo "<script type='text/javascript'> alert('$message'); window.location.href='index.php';</script>";
                 }
                 else
                 {

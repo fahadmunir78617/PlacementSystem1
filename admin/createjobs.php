@@ -70,13 +70,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
 
 
 if(!isset($_SESSION['adminname'])&&!isset($_SESSION['employername'])){
-    header("Location: ../homepage.php");
+    header("Location: ../index.php");
 }
 
 
 if(isset($_POST['logout'])){
     session_destroy();
-    header("Location: ../homepage.php");
+    header("Location: ../index.php");
 }
 
 
@@ -140,7 +140,7 @@ if(isset($_POST['logout'])){
                     <div class="col-md-6 latest-job ">
 
                         <div class="form-group">
-                            <label for="fname">Company Name</label>
+                            <label for="fname">job title eg web developer</label>
                             <input type="text" class="form-control input-sm" name="cname" placeholder="Company Name" value="" required="">
                         </div>
 

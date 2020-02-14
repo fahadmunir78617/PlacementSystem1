@@ -19,13 +19,13 @@ include "../dbcon.php";
 session_start();
 
 if(!isset($_SESSION['fname'])){
-    header("Location: ../homepage.php");
+    header("Location: ../index.php");
 }
 
 
 if(isset($_POST['logout'])){
     session_destroy();
-    header("Location: ../homepage.php");
+    header("Location: ../index.php");
 }
 
 

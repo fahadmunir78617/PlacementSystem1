@@ -29,7 +29,7 @@ if(isset($_POST['apply']))
     if ($result->num_rows > 0)
     {
         $message = "Already applied to that job";
-        echo "<script type='text/javascript'> alert('$message'); window.location.href='homepage.php'; </script>";
+        echo "<script type='text/javascript'> alert('$message'); window.location.href='index.php'; </script>";
     }
     else
     {
@@ -50,7 +50,7 @@ if(isset($_POST['apply']))
             if ($con->query($sql) == true)
             {
                 $message = "Applied Successfully";
-                echo "<script type='text/javascript'> alert('$message'); window.location.href='homepage.php'; </script>";
+                echo "<script type='text/javascript'> alert('$message'); window.location.href='index.php'; </script>";
             }
             else
             {

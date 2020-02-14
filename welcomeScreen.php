@@ -90,7 +90,7 @@
                     <li>E</li>
                 </ul>
                 
-                <a href="homepage.php" class="enter-button">Enter to Job Portal Website</a>
+                <a href="index.php" class="enter-button">Enter to Job Portal Website</a>
             </div>
         </div>
         

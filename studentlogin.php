@@ -13,7 +13,7 @@ include "dbcon.php";
     <link rel="stylesheet" type="text/css" href="css\style.css">
 </head>
 <body class="loginbody">
-		<a href="homepage.php"><i class="fa fa-home" style="font-size:40px;color: rgba(255, 195, 18, 0.7);margin: 20px 0 0 30px;"></i></a>
+		<a href="index.php"><i class="fa fa-home" style="font-size:40px;color: rgba(255, 195, 18, 0.7);margin: 20px 0 0 30px;"></i></a>
 <div class="container">
 	<div class="d-flex justify-content-center h-100">
 		<div class="card">
@@ -88,7 +88,7 @@ include "dbcon.php";
                     $_SESSION['cv']=$row['cv'];
 
 
-                    header("Location: homepage.php");
+                    header("Location: index.php");
                 }
                 else
                 {

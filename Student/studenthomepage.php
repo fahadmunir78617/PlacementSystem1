@@ -19,13 +19,13 @@ include "../dbcon.php";
 session_start();
 
 if(!isset($_SESSION['fname'])){
-    header("Location: ../homepage.php");
+    header("Location: ../index.php");
 }
 
 
 if(isset($_POST['logout'])){
     session_destroy();
-    header("Location: ../homepage.php");
+    header("Location: ../index.php");
 }
 
 if(isset($_POST['apply']))
@@ -81,7 +81,7 @@ if(isset($_POST['apply']))
 	</section>
 	<header>
 			<div class="logo">
-					<img src="..\images\logo1.png" alt="#HOME" >
+
 			</div>
 			<div class="title">Welcome to Student Dashboard</div>
 			<nav>

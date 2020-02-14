@@ -18,13 +18,13 @@
 session_start();
 
 if(!isset($_SESSION['adminname'])&&!isset($_SESSION['employername'])){
-    header("Location: ../homepage.php");
+    header("Location: ../index.php");
 }
 
 
 if(isset($_POST['logout'])){
     session_destroy();
-    header("Location: ../homepage.php");
+    header("Location: ../index.php");
 }
 
 
@@ -38,7 +38,7 @@ if(isset($_POST['logout'])){
 	</section>
 	<header>
 			<div class="logo">
-					<img src="..\images\logo1.png" alt="#HOME" >
+					<img src="..\images\razaq.png" style="width:60px;" alt="#HOME" >
 			</div>
 
         <?php

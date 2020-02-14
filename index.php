@@ -900,7 +900,7 @@ Get our Jobs
         <div class="col-md-4">
             <div class="footer-ul">
                 <ul>
-                    <li><a href="homepage.php">Home</a></li>
+                    <li><a href="index.php">Home</a></li>
                     <li><a href="privacypolicy.php">Privacy Policy</a></li>
                     <li><a href="termscondtion.php">Terms & Conditions</a></li>
 

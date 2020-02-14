@@ -28,7 +28,7 @@
 <!--===============================================================================================-->
 </head>
 <body>
-<a href="homepage.php"><i class="fa fa-home" style="font-size:48px;padding: 20px 0 0 30px;
+<a href="index.php"><i class="fa fa-home" style="font-size:48px;padding: 20px 0 0 30px;
 
 
 display: block;
