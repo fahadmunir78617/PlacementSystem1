@@ -27,12 +27,11 @@ $userid = $_SESSION['userid'];
 if ($_SERVER["REQUEST_METHOD"] == "POST")
 {
     $cname = $_POST['cname'];
-    $csalary = $_POST['csalary'];
     $cjob_title = $_POST['cjob_title'];
+    $csalary = $_POST['csalary'];
     $cdesc = $_POST['cdesc'];
     $cexperience = $_POST['cexperience'];
     $ccity = $_POST['ccity'];
-    $cjob_title = $_POST['cjob_title'];
     $clogo_path = $con->real_escape_string('../upload/'.$_FILES['clogo']['name']);
 
     if(preg_match("!image!", $_FILES['clogo']['type']))
@@ -40,15 +39,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
         if (copy($_FILES['clogo']['tmp_name'], $clogo_path))
         {
             $_SESSION['cname'] = $cname;
-            $_SESSION['csalary'] = $csalary;
             $_SESSION['cjob_title'] = $cjob_title;
+            $_SESSION['csalary'] = $csalary;
             $_SESSION['cdesc'] = $cdesc; 
             $_SESSION['cexperience'] = $cexperience; 
             $_SESSION['ccity'] = $ccity;  
             $_SESSION['clogo'] = $clogo_path;
 
-            $sql="INSERT INTO company (employerid,cname,csalary,cjob_type,cdesc,cexperience,ccity,clogo)"
-            . "VALUES ('$userid','$cname','$csalary','$cjob_title','$cdesc','$cexperience','$ccity','$clogo_path')";
+            $sql="INSERT INTO company (employerid,cname,cjob_title,csalary,cdesc,cexperience,ccity,clogo)"
+            . "VALUES ('$userid','$cname','$cjob_title','$csalary','$cdesc','$cexperience','$ccity','$clogo_path')";
 
             if ($con->query($sql) == true)
             {
