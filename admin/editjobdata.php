@@ -197,7 +197,7 @@ if(isset($_POST['logout'])){
                                 <div class="form-group">
                                     <label>Upload Logo</label><br>
                                     <img src="<?php echo $row['clogo']; ?>" hight="50px" width="50px">
-                                    <input type="file" name="clogo" value="" class="btn btn-default">
+                                    <input type="file" name="clogo" value=" " class="btn btn-default">
 
                                 </div>
 
