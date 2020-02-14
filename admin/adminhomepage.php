@@ -105,6 +105,7 @@ if(isset($_POST['logout'])){
                 
                 <div class="caption">
                     <h3><?php echo $row['cname']; ?></h3>
+                    <h3><?php echo $row['cjob_title']; ?></h3>
                     <p class="flex-text text-muted"><br>Salary: $<?php echo $row['csalary']; ?>/Month
                                                     <br>Requirements: <?php echo $row['cdesc']; ?> 
                                                     <br>City: <?php echo $row['ccity']; ?> 
