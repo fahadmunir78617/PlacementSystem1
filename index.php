@@ -304,6 +304,7 @@ Get our Jobs
                         <br>
 
                         <span class="job-btn"> <?php echo substr($row['cname'],0,15); ?>  </span><br>
+                        <span class="job-btn"> <?php echo substr($row['cjob_title'],0,15); ?>  </span><br>
                         <span class="job-btn"> <?php echo $row['ccity']; ?>
 
                     </div>
