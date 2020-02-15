@@ -49,9 +49,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
             $_SESSION['clogo'] = $clogo_path;
             $sql="update company set employerid='$userid', cname='$cname', cjob_title='$cjob_title', csalary='$csalary',
                   cdesc='$cdesc', cexperience='$cexperience',  ccity='$ccity', clogo='$clogo_path' where id='$edit_jobdataID'";
-            /*$sql="INSERT INTO company (employerid,cname,cjob_title,csalary,cdesc,cexperience,ccity,clogo)"
-                . "VALUES ('$userid','$cname','$cjob_title','$csalary','$cdesc','$cexperience','$ccity','$clogo_path')";*/
-
             if ($con->query($sql) == true)
             {
                 $message = "Job Posted ubdate Successfully";
@@ -176,7 +173,7 @@ if(isset($_POST['logout'])){
                                 </div>
 
                                 <div class="form-group">
-                                    <button type="submit" class="btn btn-flat btn-success">Create Job</button>
+                                    <button type="submit" class="btn btn-flat btn-success">Update Job</button>
                                 </div>
                             </div>
 
