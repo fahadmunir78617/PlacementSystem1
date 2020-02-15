@@ -26,6 +26,7 @@ $userid = $_SESSION['userid'];
 
 if ($_SERVER["REQUEST_METHOD"] == "POST")
 {
+    $edit_jobdataID = $_GET['edit_jobdataID'];
     $cname = $_POST['cname'];
     $cjob_title = $_POST['cjob_title'];
     $csalary = $_POST['csalary'];
@@ -38,6 +39,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
     {
         if (copy($_FILES['clogo']['tmp_name'], $clogo_path))
         {
+            $_SESSION['edit_jobdataID'] = $edit_jobdataID;
             $_SESSION['cname'] = $cname;
             $_SESSION['cjob_title'] = $cjob_title;
             $_SESSION['csalary'] = $csalary;
@@ -45,13 +47,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
             $_SESSION['cexperience'] = $cexperience;
             $_SESSION['ccity'] = $ccity;
             $_SESSION['clogo'] = $clogo_path;
-
-            $sql="INSERT INTO company (employerid,cname,cjob_title,csalary,cdesc,cexperience,ccity,clogo)"
-                . "VALUES ('$userid','$cname','$cjob_title','$csalary','$cdesc','$cexperience','$ccity','$clogo_path')";
+            $sql="update company set employerid='$userid', cname='$cname', cjob_title='$cjob_title', csalary='$csalary',
+                  cdesc='$cdesc', cexperience='$cexperience',  ccity='$ccity', clogo='$clogo_path' where id='$edit_jobdataID'";
+            /*$sql="INSERT INTO company (employerid,cname,cjob_title,csalary,cdesc,cexperience,ccity,clogo)"
+                . "VALUES ('$userid','$cname','$cjob_title','$csalary','$cdesc','$cexperience','$ccity','$clogo_path')";*/
 
             if ($con->query($sql) == true)
             {
-                $message = "Job Posted Successfully";
+                $message = "Job Posted ubdate Successfully";
                 echo "<script type='text/javascript'> alert('$message'); window.location.href='adminhomepage.php'; </script>";
             }
             else
@@ -152,7 +155,7 @@ if(isset($_POST['logout'])){
 
             <div class="main">
                 <div class="createjobset">
-                    <form role="form" action="createjobs.php" method="post" enctype="multipart/form-data">
+                    <form role="form" action="editjobdata.php?edit_jobdataID=<?php echo $row['id'];?>" method="post" enctype="multipart/form-data">
                         <div class="row">
 
                             <div class="col-md-6 latest-job ">
@@ -196,8 +199,9 @@ if(isset($_POST['logout'])){
 
                                 <div class="form-group">
                                     <label>Upload Logo</label><br>
-                                    <img src="<?php echo $row['clogo']; ?>" hight="50px" width="50px">
-                                    <input type="file" name="clogo" value="<?php echo $row['clogo']; ?>" class="btn btn-default"><span><?php echo $row['clogo'];?></span>
+
+                                    <input type="file" name="clogo" value="" class="btn btn-default" required >
+
 
 
                                 </div>
