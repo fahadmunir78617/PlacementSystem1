@@ -113,7 +113,7 @@ if(isset($_POST['logout'])){
 
                     </p>
                     <p><a href="editjobdata.php?edit=<?php echo $row['id'];?>"><input type="button" class="btn btn-success"  Value="Edit Now" ></a>
-                    <a href="Delete.php?edit=<?php echo $row['id'];?>"><input type="button" class="btn btn-danger"  Value="Delete Now" ></a></p>
+                    <a href="delete_jobdata.php?delete=<?php echo $row['id'];?>"><input type="button" class="btn btn-danger"  Value="Delete Now" ></a></p>
 				</div>
 				<!-- /.caption -->
 			</div>
