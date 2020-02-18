@@ -45,9 +45,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
             $_SESSION['cexperience'] = $cexperience; 
             $_SESSION['ccity'] = $ccity;  
             $_SESSION['clogo'] = $clogo_path;
+            if (isset($_SESSION['adminname'])) {
 
-            $sql="INSERT INTO company (employerid,cname,cjob_title,csalary,cdesc,cexperience,ccity,clogo)"
-            . "VALUES ('$userid','$cname','$cjob_title','$csalary','$cdesc','$cexperience','$ccity','$clogo_path')";
+                $sql = "INSERT INTO company (employerid,cname,cjob_title,csalary,cdesc,cexperience,ccity,clogo,cjob_status)"
+                    . "VALUES ('$userid','$cname','$cjob_title','$csalary','$cdesc','$cexperience','$ccity','$clogo_path','1')";
+            }
+            if (isset($_SESSION['employername'])) {
+
+                $sql = "INSERT INTO company (employerid,cname,cjob_title,csalary,cdesc,cexperience,ccity,clogo,cjob_status)"
+                    . "VALUES ('$userid','$cname','$cjob_title','$csalary','$cdesc','$cexperience','$ccity','$clogo_path','0')";
+            }
 
             if ($con->query($sql) == true)
             {
