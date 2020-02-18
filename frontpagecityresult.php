@@ -96,7 +96,7 @@ if(isset($_POST['apply']))
 
                         <?php
                         $ids = $_GET['city'];
-                        $sql = "SELECT * FROM company WHERE ccity LIKE '%$ids%' Order By cname ASC";
+                        $sql = "SELECT * FROM company WHERE ccity LIKE '%$ids%' AND cjob_status = '1' Order By cname ASC";
                         $result = $con->query($sql);
                         if($result->num_rows > 0)
                         {
