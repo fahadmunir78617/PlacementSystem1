@@ -234,7 +234,7 @@ include "dbcon.php";
 <section class="img-header-bg">
     <div class="header-upper-content">
         <h1 style="letter-spacing: 3px;">WE HELP YOU TO GET YOUR DREAM COME
-            <span class="text-warning" style="border-bottom: 2px solid red;"> TRUE! developer again from ahsan
+            <span class="text-warning" style="border-bottom: 2px solid red;"> TRUE! developer again from Ahsan
 
     </span>
         </h1>
@@ -271,7 +271,7 @@ Get our Jobs
             <?php
 
 
-            $sql = "SELECT * FROM company ORDER BY id DESC LIMIT 0, 6";
+            $sql = "SELECT * FROM company where cjob_status = '1' ORDER BY id DESC LIMIT 0, 6";
 
 
             $result = $con->query($sql);
@@ -303,7 +303,7 @@ Get our Jobs
 
                         <br>
 
-                        <span class="job-btn"> <?php echo substr($row['cname'],0,15); ?>  </span><br>
+
                         <span class="job-btn"> <?php echo substr($row['cjob_title'],0,15); ?>  </span><br>
                         <span class="job-btn"> <?php echo $row['ccity']; ?>
 

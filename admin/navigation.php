@@ -15,7 +15,8 @@ if (isset($_SESSION['adminname'])) {
                     Jobs</a>
             </li>
             <li>
-                <a href="Approvedjob.php"><i style="font-size:24px" class="fa fa-check-circle-o"></i>&emsp;Job Approved & Block</a>
+                <a href="Approvedjob.php"><i style="font-size:24px" class="fa fa-check-circle-o"></i>&emsp;Approved
+                    Jobs</a>
             </li>
             <li>
                 <a href="applied-jobs.php"><i style="font-size:24px" class="fa fa-envelope-o"></i>&emsp;Job Application</a>
