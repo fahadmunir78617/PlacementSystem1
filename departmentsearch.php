@@ -4,19 +4,21 @@ session_start();
 ?>
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Student Dashboard</title>
-    <link rel="shortcut icon" type="image/png" href="..\images\favicon.ico"/>
+    <link rel="shortcut icon" type="image/png" href="..\images\favicon.ico" />
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="icon" href="..\images\favicon.ico" type="image/gif" sizes="16x16">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet'  type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
 
 </head>
+
 <body>
 
-<?php
+    <?php
 
 
 if(isset($_POST['apply']))
@@ -63,38 +65,39 @@ if(isset($_POST['apply']))
         }
     }
 }
+    
 ?>
 
-<section class="preloader">
-    <div class="spinner">
-        <span class="spinner-rotate"></span>
-    </div>
-</section>
+    <section class="preloader">
+        <div class="spinner">
+            <span class="spinner-rotate"></span>
+        </div>
+    </section>
 
 
-<section style="background: #192a56;">
+    <section style="background: #192a56;">
 
-    <div style="width: 100%; height: auto;">
-
-
-
-        <div class="mainpage">
-
-            <div class="text-center">
-                <h2 style="color: #fff;">Click on Apply button to Apply Job</h2>
-
-            </div>
-            <br><br>
-            <div class="container">
+        <div style="width: 100%; height: auto;">
 
 
-                <div class="setting">
+
+            <div class="mainpage">
+
+                <div class="text-center">
+                    <h2 style="color: #fff;">Click on Apply button to Apply Job</h2>
+
+                </div>
+                <br><br>
+                <div class="container">
 
 
-                    <div class="flex-row row">
+                    <div class="setting">
 
 
-                        <?php
+                        <div class="flex-row row">
+
+
+                            <?php
                         $ids = $_GET['city'];
                         $sql = "SELECT * FROM company WHERE cname LIKE '%$ids%' Order By cname ASC";
                         $result = $con->query($sql);
@@ -106,35 +109,41 @@ if(isset($_POST['apply']))
                             {
 
                                 ?>
-                                <div class="col-md-4">
+                            <div class="col-md-4">
 
-                                    <div class="thumbnail ">
-                                        <img src="images/<?php echo $row['clogo']; ?>" alt="companylogo">
+                                <div class="thumbnail ">
+                                    <img src="images/<?php echo $row['clogo']; ?>" alt="companylogo">
 
-                                        <div class="caption">
+                                    <div class="caption">
 
-                                            <h3><?php echo $row['cname']; ?></h3>
-                                            <p class="flex-text text-muted"><br>Salary: $<?php echo $row['csalary']; ?>/Month
-                                                <br>Requirements: <?php echo $row['cdesc']; ?>
-                                                <br>City: <?php echo $row['ccity']; ?>
-                                                <br>Experience: <?php echo $row['cexperience']; ?> Years
-                                            </p>
-                                            <form method="post" action="frontpageclickresult.php?id=<?php echo $row["id"]; ?>">
-                                                <input type="hidden" name="empid" value="<?php echo $row['employerid'] ?>">
-                                                <button type="submit" name="apply" class="btn btn-primary" >Apply Job</button>
-                                            </form>
-                                        </div>
-                                        <!-- /.caption -->
+                                        <h3>
+                                            <?php echo $row['cname']; ?>
+                                        </h3>
+                                        <p class="flex-text text-muted"><br>Salary: $
+                                            <?php echo $row['csalary']; ?>/Month
+                                            <br>Requirements:
+                                            <?php echo $row['cdesc']; ?>
+                                            <br>City:
+                                            <?php echo $row['ccity']; ?>
+                                            <br>Experience:
+                                            <?php echo $row['cexperience']; ?> Years
+                                        </p>
+                                        <form method="post" action="frontpageclickresult.php?id=<?php echo $row[" id"]; ?>">
+                                            <input type="hidden" name="empid" value="<?php echo $row['employerid'] ?>">
+                                            <button type="submit" name="apply" class="btn btn-primary">Apply Job</button>
+                                        </form>
                                     </div>
-                                    <!-- /.thumbnail -->
-
+                                    <!-- /.caption -->
                                 </div>
+                                <!-- /.thumbnail -->
+
+                            </div>
 
 
 
 
 
-                                <?php
+                            <?php
                             }
                         }
                         else{
@@ -145,18 +154,18 @@ if(isset($_POST['apply']))
                         ?>
 
 
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    </div>
+        </div>
 
 
-</section>
+    </section>
 
-<script src="js/jquery.js"></script>
-<script src="js/custom.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/custom.js"></script>
 </body>
 
 </html>
