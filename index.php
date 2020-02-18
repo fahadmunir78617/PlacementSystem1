@@ -271,7 +271,7 @@ Get our Jobs
             <?php
 
 
-            $sql = "SELECT * FROM company ORDER BY id DESC LIMIT 0, 6";
+            $sql = "SELECT * FROM company where cjob_status = '1' ORDER BY id DESC LIMIT 0, 6";
 
 
             $result = $con->query($sql);
