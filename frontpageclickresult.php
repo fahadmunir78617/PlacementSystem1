@@ -118,13 +118,13 @@ if(isset($_POST['apply']))
                                         <p class="flex-text text-muted"><br>Salary: $
                                             <?php echo $row['csalary']; ?>/Month
                                             <br>Requirements:
-                                            <?php echo $row['cdesc']; ?>
+                                            <?php echo substr( $row['cdesc'],0,30)."......"; ?>
                                             <br>City:
                                             <?php echo $row['ccity']; ?>
                                             <br>Experience:
                                             <?php echo $row['cexperience']; ?> Years
                                         </p>
-                                        <form method="post" action="frontpageclickresult.php?id=<?php echo $row[" id"]; ?>">
+                                        <form method="post" action="frontpageclickresult.php?id=<?php echo $row["id"]; ?>">
                                             <input type="hidden" name="empid" value="<?php echo $row['employerid'] ?>">
                                             <button type="submit" name="apply" class="btn btn-primary">Apply Job</button>
                                         </form>
