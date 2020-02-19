@@ -115,7 +115,7 @@ if(isset($_POST['apply']))
 
                                             <h3><?php echo $row['cname']; ?></h3>
                                             <p class="flex-text text-muted"><br>Salary: $<?php echo $row['csalary']; ?>/Month
-                                                <br>Requirements: <?php echo $row['cdesc']; ?>
+                                                <br>Requirements: <?php echo substr( $row['cdesc'],0,30)."......"; ?>
                                                 <br>City: <?php echo $row['ccity']; ?>
                                                 <br>Experience: <?php echo $row['cexperience']; ?> Years
                                             </p>
