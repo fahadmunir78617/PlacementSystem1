@@ -65,14 +65,7 @@ if(isset($_POST['apply']))
         }
     }
 }
-if(isset($_POST['seemorebtn']))
-{
-    $value=$_POST['seemore'];
 
-    $_SESSION['seemore'] = $value;
-
-    header("location:seemoredetailjob.php");
-}
 ?>
 
     <section class="preloader">
@@ -132,12 +125,13 @@ if(isset($_POST['seemorebtn']))
                                             <br>Experience:
                                             <?php echo $row['cexperience']; ?> Years
                                         </p>
+
                                         <form method="post" action="frontpageclickresult.php?id=<?php echo $row["id"]; ?>">
-                                            <input type="hidden" name="seemore" value="<?php echo $row['id'] ?>">
-                                            <button type="submit" name="seemorebtn" class="btn btn-primary">See more</button>
+                                            <a href="seemoredetailjob.php?seemore=<?php echo $row["id"] ;?>"><input type="button" class="btn btn-primary"  Value="See more" ></a>
                                             <input type="hidden" name="empid" value="<?php echo $row['employerid'] ?>">
                                             <button type="submit" name="apply" class="btn btn-primary">Apply Job</button>
                                         </form>
+
                                     </div>
                                     <!-- /.caption -->
                                 </div>
