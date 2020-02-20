@@ -39,97 +39,63 @@
             font-size: 26px;
             padding: 20px;
         }
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 35%;
+            height: 400px;
+        }
+        .jobtext{
+            font-weight:bold;
+            color: black;
+            font-size: 30px;
+
+        }
     </style>
 </head>
 <body>
 <?php
 include "dbcon.php";
 $seemore = $_GET['seemore'];
-echo "$seemore";
-echo "ok";
 $sql = "SELECT * FROM company WHERE id = '$seemore' ";
 $result = $con->query($sql);
 if($result->num_rows > 0)
 {
 while($row = $result->fetch_assoc())
 {?>
-<div class="banner" style="margin-bottom: 2%;">
-    <img src="images/<?php echo $row['clogo']; ?>" class="img-responsive " >
-</div>
-<div class="container">
     <div class="row">
-        <div class="col-12">
-            <h1 style ="text-align: center;margin-bottom:30px; font-weight:bold;" id="hhg"> Job Description </h1>
-            <p>
-
-                We are looking for sharp and motivated PHP developer internees who have a good hands-on experience with LAMP stack. The candidate will work in a team to design, develop and support company/clients critical applications.
-            </p>
-            <hr>
-        </div>
-
-
-        <div class="col-lg-6 col-md-6 col-sm-12 col-12">
-            <h2 id="hd">You will be able to learn through the internship is</h2>
-            <ul>
-                <li> Regularly interact with Team Lead to receive information and updates about product progress and results </li>
-                <li> Analyze & Develop product requirements </li>
-                <li> Work with Team lead to incorporate client needs in product development </li>
-                <li> Monitors & Cater changes as per the need </li>
-            </ul>
-
-        </div>
-        <div class="col-lg-6 col-md-6 col-sm-12 col-12">
-            <img src="join-us-web3.jpg" width="100%">
-        </div>
-
-
-        <div class="col-lg-6 col-md-6 col-sm-12 col-12">
-            <img src="join-us-web4.jpg" width="100%">
-            <hr>
-
-
-
-        </div>
-        <div class="col-lg-6 col-md-6 col-sm-12 col-12">
-
-            <h2 id="hy">Skills:</h2>
-            <ul>
-                <li> Cascade Style Sheets(CSS)</li>
-                <li> Object Oriented Programming</li>
-                <li> LAMP</li>
-                <li> Model View Controller (MVC)</li>
-                <li> Java Script</li>
-                <li> JQuery</li>
-                <li> Laravel</li>
-            </ul>
-            <hr>
-        </div>
-        <hr>
-        <div class="col-lg-3 col-md-3 col-sm-12 col-12">
-            <h2 style="text-align:center">Job Type:  </h2>
-            <p style="text-align:center"> Full Time/Permanent  </p>
-            <hr>
-        </div>
-        <div class="col-lg-3 col-md-3 col-sm-12 col-12">
-            <h2 style="text-align:center"> Job Location: </h2>
-            <p style="text-align:center"> Lahore, Pakistan  </p>
-            <hr>
-        </div>
-        <div class="col-lg-3 col-md-3 col-sm-12 col-12">
-            <h2 style="text-align:center"> Minimum Education </h2>
-            <p style="text-align:center">  Bachelor </p>
-            <hr>
-        </div>
-        <div class="col-lg-3 col-md-3 col-sm-12 col-12">
-            <h2 style="text-align:center"> Degree Title </h2>
-            <p style="text-align:center">  BS (CS) & Associate Degree </p>
-            <hr>
-        </div>
-
-
-
-    </div>
+        <div class="con">
+<div class="banner" style="margin-bottom: 2%; margin-top: 5%;">
+    <h1 style ="text-align: center;margin-bottom:30px; font-weight:bold;" id="hhg"> Company Logo</h1>
+    <hr>
+    <img src="images/<?php echo $row['clogo']; ?>" class="img-responsive center"" >
 </div>
+    </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h1 style="text-align: center; font-weight:bold;">Job Description</h1>
+                    <hr>
+                </div>
+            </div>
+        </div>
+
+        <div class="container" style="margin-top: 3%; margin-bottom: 5%">
+            <div class="row">
+                <div class="col-md-12 ">
+                    <p ><span class="jobtext">Salary : </span><?php echo $row['csalary']; ?> / Month</p><br>
+                    <p ><span class="jobtext">Requirements : </span><?php echo $row['cdesc']; ?></p><br>
+                    <p ><span class="jobtext">City : </span><?php echo $row['ccity']; ?></p><br>
+                    <p ><span class="jobtext">Experience : </span><?php echo $row['cexperience']; ?> Years</p>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
 <?php }
 
 }
