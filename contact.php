@@ -40,7 +40,7 @@ display: block;
 
 	<div class="container-contact100">
 		<div class="wrap-contact100">
-			<form class="contact100-form validate-form">
+			<form class="contact100-form validate-form"  method="post" action="phpmailer/send_mail.php">
 				<span class="contact100-form-title">
 					Contact Us
 				</span>
@@ -74,7 +74,7 @@ display: block;
 				</div>
 
 				<div class="container-contact100-form-btn">
-					<button class="contact100-form-btn">
+					<button class="contact100-form-btn" type="submit">
 						<span>
 							Submit
 							<i class="zmdi zmdi-arrow-right m-l-8"></i>
