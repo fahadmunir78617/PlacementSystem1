@@ -129,6 +129,7 @@ if(isset($_POST['apply']))
                                             <?php echo $row['cexperience']; ?> Years
                                         </p>
                                         <form method="post" action="frontpageclickresult.php?id=<?php echo $row["id"]; ?>">
+                                            <a target=”_blank” href="seemoredetailjob.php?seemore=<?php echo $row["id"] ;?>"><input type="button" class="btn btn-primary"  Value="See more" ></a>
                                             <input type="hidden" name="empid" value="<?php echo $row['employerid'] ?>">
                                             <button type="submit" name="apply" class="btn btn-primary">Apply Job</button>
                                         </form>
