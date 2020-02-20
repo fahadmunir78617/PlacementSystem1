@@ -99,7 +99,7 @@ if(isset($_POST['apply']))
                         $sql = "SELECT company.id,company.employerid,company.cname,company.cjob_title,company.csalary,company.cdesc,
             company.cexperience,company.ccity,company.clogo,company.cjob_status,admin.status 
             FROM admin INNER JOIN company ON admin.id = company.employerid WHERE admin.status ='1' and company.cjob_status = '1' AND company.ccity LIKE '%$ids%' 
-            ORDER BY company.id DESC LIMIT 0,6";
+            Order By company.cname ASC";
 
                         $result = $con->query($sql);
                         if($result->num_rows > 0)
