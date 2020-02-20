@@ -271,7 +271,11 @@ Get our Jobs
             <?php
 
 
-            $sql = "SELECT * FROM company where cjob_status = '1' ORDER BY id DESC LIMIT 0, 6";
+
+            $sql = "SELECT company.id,company.employerid,company.cname,company.cjob_title,company.csalary,company.cdesc,
+            company.cexperience,company.ccity,company.clogo,company.cjob_status,admin.status 
+            FROM admin INNER JOIN company ON admin.id = company.employerid WHERE admin.status ='1' and company.cjob_status = '1'
+            ORDER BY company.id DESC LIMIT 0,6";
 
 
             $result = $con->query($sql);
