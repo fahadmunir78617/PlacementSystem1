@@ -33,7 +33,8 @@ $p_num = $_POST['phone'];
        echo '<script language="javascript">';
        echo 'alert("Information has been saved ")';
        echo '</script>';
-       echo "<script> location='/razaaq/contact.php' </script>";
+
+       echo "<script> location='../contact.php' </script>";
    }
 
 ?>

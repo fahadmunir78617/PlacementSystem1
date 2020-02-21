@@ -1,11 +1,6 @@
 <?PHP
 include "dbcon.php";
 
-//if(isset($_POST['search'])){
-// $search=$_POST['search-title'];
-// $query="SELECT * FROM `company` WHERE cname LIKE '%$search%' OR ccity LIKE '%$search%'";
-// $query=mysqli_query($con,$query);
-//}
 
 ?>
 
