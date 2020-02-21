@@ -238,6 +238,9 @@ include "dbcon.php";
 
     </span>
         </h1>
+        <?php
+        include "search.php";
+        ?>
     </div>
 </section>
 <br><br><br>

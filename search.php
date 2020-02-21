@@ -43,7 +43,7 @@ include "dbcon.php";
         <br />
         <div class="row justify-content-center">
             <div class="col-12 col-md-10 col-lg-12">
-                <form action="index.php" method="post" class="card card-sm">
+                <form action="viewedSearched.php" method="post" class="card card-sm">
                     <div class="card-body row no-gutters align-items-center">
                         <div class="col-auto">
                             <i class="fa fa-search h4 text-body"></i>
