@@ -284,10 +284,7 @@ Get our Jobs
             company.cexperience,company.ccity,company.clogo,company.cjob_status,admin.status 
             FROM admin INNER JOIN company ON admin.id = company.employerid WHERE admin.status ='1' and company.cjob_status = '1'
            and (company.cjob_title LIKE '%$search%' OR  company.ccity LIKE '%$search%') ORDER BY company.id DESC LIMIT 0,6";
-                  //  $sql = "SELECT * FROM company WHERE cjob_title LIKE '%$search%' OR  ccity LIKE '%$search%'";
 
-//                    $sql .= " AND  ccity LIKE '%$search%'";
-//                   $sql .="ORDER BY id DESC LIMIT 0, 6";
                     $result=mysqli_query($con,$sql);
 
 
