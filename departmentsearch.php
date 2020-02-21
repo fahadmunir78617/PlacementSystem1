@@ -98,11 +98,12 @@ if(isset($_POST['apply']))
 
 
                             <?php
-                        $ids = $_GET['city'];
+                        echo $ids = $_GET['city'];
+
                             $sql = "SELECT company.id,company.employerid,company.cname,company.cjob_title,company.csalary,company.cdesc,
             company.cexperience,company.ccity,company.clogo,company.cjob_status,admin.status 
-            FROM admin INNER JOIN company ON admin.id = company.employerid WHERE admin.status ='1' and company.cjob_status = '1' AND company.ccity LIKE '%$ids%' 
-            Order By company.cname ASC";
+            FROM admin INNER JOIN company ON admin.id = company.employerid WHERE admin.status ='1' and company.cjob_status = '1' AND company.cjob_title LIKE '%$ids%' 
+            Order By company.cjob_title ASC";
                         $result = $con->query($sql);
                         if($result->num_rows > 0)
                         {
@@ -121,6 +122,9 @@ if(isset($_POST['apply']))
 
                                         <h3>
                                             <?php echo $row['cname']; ?>
+                                        </h3>
+                                        <h3>
+                                            <?php echo $row['cjob_title']; ?>
                                         </h3>
                                         <p class="flex-text text-muted"><br>Salary: $
                                             <?php echo $row['csalary']; ?>/Month

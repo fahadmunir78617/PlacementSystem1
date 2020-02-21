@@ -301,7 +301,7 @@ Get our Jobs
                                 <?php
                                 if (isset($_SESSION['fname'])) {
                                     ?>
-                                    <a href='frontpageclickresult.php?id=<?php echo $row[' id'] ?>'> <img src="images/<?php echo $row['clogo']; ?>" width="100%" height="180"></a>
+                                    <a href='frontpageclickresult.php?id=<?php echo $row['id'] ?>'> <img src="images/<?php echo $row['clogo']; ?>" width="100%" height="180"></a>
                                     <?php
                                 }
 

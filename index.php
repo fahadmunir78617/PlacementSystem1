@@ -696,7 +696,7 @@ Get our Jobs
                         if (isset($_SESSION['fname'])) {
                             ?>
 
-                            <a href="departmentsearch.php?city=Web Development"><img src="images/web.jpg" width="100%" class="rounded" height="150"></a>
+                            <a href="departmentsearch.php?city=Devloper"><img src="images/web.jpg" width="100%" class="rounded" height="150"></a>
                             <?php
                         }
 
@@ -723,7 +723,7 @@ Get our Jobs
                         if (isset($_SESSION['fname'])) {
                             ?>
 
-                            <a href="departmentsearch.php?city=Android Development"><img src="images/android-development-services.jpg" width="100%" class="rounded" height="150"></a>
+                            <a href="departmentsearch.php?city=Android"><img src="images/android-development-services.jpg" width="100%" class="rounded" height="150"></a>
                             <?php
                         }
 
