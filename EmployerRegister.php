@@ -27,7 +27,7 @@ include "dbcon.php";
 
 <div class="mainpageregister">
     <div class="title">
-        <h1>Register as a Student</h1>
+        <h1>Register as a Employer</h1>
     </div>
     <form action="" method="post" enctype="multipart/form-data" name="form" ">
 
@@ -140,24 +140,24 @@ include "dbcon.php";
 
             <div class="form-group">
                 <label for="fname">First Name</label> <div style="color: red;float: right;"> <?php echo $fnameErr;?></div>
-                <input type="text" class="form-control input-sm" name="fname" placeholder="First Name" value="<?php echo isset($_POST["fname"]) ? $_POST["fname"] : ''; ?>">
+                <input type="text" class="form-control input-sm"   required pattern="([A-Za-z ]+)" autofocus required title="Use Only characters" name="fname" placeholder="First Name" value="<?php echo isset($_POST["fname"]) ? $_POST["fname"] : ''; ?>">
             </div>
 
             <div class="form-group">
                 <label for="companyname">Comapny Name</label> <span style="color: red;float: right;"> <?php echo $companynameErr;?></span>
-                <input type="text" class="form-control input-sm"  name="companyname" placeholder="Company Name" value="<?php echo isset($_POST["companyname"]) ? $_POST["companyname"] : ''; ?>" >
+                <input type="text" class="form-control input-sm" required  name="companyname" placeholder="Company Name" value="<?php echo isset($_POST["companyname"]) ? $_POST["companyname"] : ''; ?>" >
             </div>
 
 
 
             <div class="form-group">
                 <label for="address">Address</label> <span style="color: red;float: right;"> <?php echo $addressErr;?></span>
-                <textarea id="address" name="address" class="form-control input-sm" rows="4" placeholder="Address"><?php echo isset($_POST["address"]) ? $_POST["address"] : ''; ?></textarea>
+                <textarea id="address" required name="address" class="form-control input-sm" rows="4" placeholder="Address"><?php echo isset($_POST["address"]) ? $_POST["address"] : ''; ?></textarea>
             </div>
 
             <div class="form-group">
                 <label for="city">City</label> <span style="color: red;float: right;"> <?php echo $cityErr;?></span>
-                <input type="text" class="form-control input-sm" id="city" name="city" value="<?php echo isset($_POST["city"]) ? $_POST["city"] : ''; ?>" placeholder="city">
+                <input type="text" class="form-control input-sm" id="city"  required pattern="([A-Za-z ]+)" autofocus required title="Use Only characters" name="city" value="<?php echo isset($_POST["city"]) ? $_POST["city"] : ''; ?>" placeholder="city">
             </div>
 
 
@@ -168,17 +168,17 @@ include "dbcon.php";
 
             <div class="form-group">
                 <label for="contactno">Contact Number</label> <span style="color: red;float: right;"> <?php echo $contactErr;?></span>
-                <input type="text" class="form-control input-sm" id="contactno" name="contact" placeholder="Contact Number" value="<?php echo isset($_POST["contact"]) ? $_POST["contact"] : ''; ?>">
+                <input type="text" class="form-control input-sm" id="contactno" required required pattern="[0-9]{11}"  autofocus required title="only use digits 0-9 and length must be 11" name="contact" placeholder="Contact Number" value="<?php echo isset($_POST["contact"]) ? $_POST["contact"] : ''; ?>">
             </div>
 
             <div class="form-group">
                 <label for="companysize">Company Size</label> <span style="color: red;float: right;"> <?php echo $companysizeErr;?></span>
-                <input type="text" class="form-control input-sm" id="companysize" name="companysize" placeholder="Company Size" value="<?php echo isset($_POST["companysize"]) ? $_POST["companysize"] : ''; ?>">
+                <input type="text" class="form-control input-sm" id="companysize" required pattern="[0-9]{3}"  autofocus required title="only use digits 0-9 and Size of company must be less then 999" name="companysize" placeholder="Company Size" value="<?php echo isset($_POST["companysize"]) ? $_POST["companysize"] : ''; ?>">
             </div>
 
             <div class="form-group">
                 <label for="email">Email address</label> <span style="color: red;float: right;"> <?php echo $emailErr;?></span>
-                <input type="email" class="form-control input-sm" id="email" name="email" placeholder="Email" value="<?php echo isset($_POST["email"]) ? $_POST["email"] : ''; ?>" >
+                <input type="email" class="form-control input-sm" id="email"  name="email" placeholder="Email" value="<?php echo isset($_POST["email"]) ? $_POST["email"] : ''; ?>" >
             </div>
 
             <div class="form-group">
