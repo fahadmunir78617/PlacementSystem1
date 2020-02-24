@@ -1,4 +1,3 @@
-fa fa-home
 <?php
 include "dbcon.php";
 ?>
@@ -171,12 +170,12 @@ include "dbcon.php";
 
                         <div class="form-group">
                             <label for="fname">First Name</label> <div style="color: red;float: right;"> <?php echo $fnameErr;?></div>
-                            <input type="text" class="form-control input-sm" name="fname" placeholder="First Name" value="<?php echo isset($_POST["fname"]) ? $_POST["fname"] : ''; ?>">
+                            <input type="text" class="form-control input-sm" required pattern="([A-Za-z ]+)" autofocus required title="Use Only characters" name="fname" placeholder="First Name" value="<?php echo isset($_POST["fname"]) ? $_POST["fname"] : ''; ?>">
                         </div>
 
                         <div class="form-group"> 
                             <label for="lname">Last Name</label> <span style="color: red;float: right;"> <?php echo $lnameErr;?></span>
-                            <input type="text" class="form-control input-sm" id="lname" name="lname" placeholder="Last Name" value="<?php echo isset($_POST["lname"]) ? $_POST["lname"] : ''; ?>" >
+                            <input type="text" class="form-control input-sm" id="lname" required pattern="([A-Za-z ]+)" autofocus required title="Use Only characters" name="lname" placeholder="Last Name" value="<?php echo isset($_POST["lname"]) ? $_POST["lname"] : ''; ?>" >
                         </div>
 
                         <div class="form-group">
@@ -191,12 +190,12 @@ include "dbcon.php";
 
                         <div class="form-group">
                             <label for="address">Address</label> <span style="color: red;float: right;"> <?php echo $addressErr;?></span>
-                            <textarea id="address" name="address" class="form-control input-sm" rows="4" placeholder="Address"><?php echo isset($_POST["address"]) ? $_POST["address"] : ''; ?></textarea>
+                            <textarea id="address" required name="address" class="form-control input-sm" rows="4" placeholder="Address"><?php echo isset($_POST["address"]) ? $_POST["address"] : ''; ?></textarea>
                         </div>
 
                         <div class="form-group">
                             <label for="city">City</label> <span style="color: red;float: right;"> <?php echo $cityErr;?></span>
-                            <input type="text" class="form-control input-sm" id="city" name="city" value="<?php echo isset($_POST["city"]) ? $_POST["city"] : ''; ?>" placeholder="city">
+                            <input type="text" class="form-control input-sm" id="city" required pattern="([A-Za-z ]+)" autofocus required title="Use Only characters" name="city" value="<?php echo isset($_POST["city"]) ? $_POST["city"] : ''; ?>" placeholder="city">
                         </div>
 
                         
@@ -207,12 +206,12 @@ include "dbcon.php";
 
                         <div class="form-group">
                             <label for="contactno">Contact Number</label> <span style="color: red;float: right;"> <?php echo $contactErr;?></span>
-                            <input type="text" class="form-control input-sm" id="contactno" name="contact" placeholder="Contact Number" value="<?php echo isset($_POST["contact"]) ? $_POST["contact"] : ''; ?>">
+                            <input type="text" class="form-control input-sm" id="contactno" required pattern="[0-9]{11}"  autofocus required title="only use digits 0-9 and length must be 11" name="contact" placeholder="Contact Number" value="<?php echo isset($_POST["contact"]) ? $_POST["contact"] : ''; ?>">
                         </div>
 
                         <div class="form-group">
                             <label for="qualification">Highest Qualification</label> <span style="color: red;float: right;"> <?php echo $qualificationErr;?></span>
-                            <input type="text" class="form-control input-sm" id="qualification" name="qualification" placeholder="Highest Qualification" value="<?php echo isset($_POST["qualification"]) ? $_POST["qualification"] : ''; ?>">
+                            <input type="text" class="form-control input-sm" id="qualification" required name="qualification" placeholder="Highest Qualification" value="<?php echo isset($_POST["qualification"]) ? $_POST["qualification"] : ''; ?>">
                         </div>
 
                         <div class="form-group">
@@ -222,17 +221,17 @@ include "dbcon.php";
                       
                         <div class="form-group">
                             <label>Skills</label> <span style="color: red;float: right;"> <?php echo $skillsErr;?></span>
-                            <textarea class="form-control input-sm" id="skills" rows="2" name="skills" placeholder="Skills" ><?php echo isset($_POST["skills"]) ? $_POST["skills"] : ''; ?></textarea>
+                            <textarea class="form-control input-sm" id="skills" rows="2" required name="skills" placeholder="Skills" ><?php echo isset($_POST["skills"]) ? $_POST["skills"] : ''; ?></textarea>
                         </div>
 
                         <div class="form-group">
                             <label>About Me</label> <span style="color: red;float: right;"> <?php echo $aboutErr;?></span>
-                            <textarea class="form-control input-sm" rows="3" id="aboutme" name="about" placeholder="About me"><?php echo isset($_POST["about"]) ? $_POST["about"] : ''; ?></textarea>
+                            <textarea class="form-control input-sm" rows="3" id="aboutme" required name="about" placeholder="About me"><?php echo isset($_POST["about"]) ? $_POST["about"] : ''; ?></textarea>
                         </div>
 
                         <div class="form-group">
                             <label for="state">State</label> <span style="color: red;float: right;"> <?php echo $stateErr;?></span>
-                            <input type="text" class="form-control input-sm" id="state" name="state" placeholder="state" value="<?php echo isset($_POST["state"]) ? $_POST["state"] : ''; ?>">
+                            <input type="text" class="form-control input-sm" id="state" required name="state" placeholder="state" value="<?php echo isset($_POST["state"]) ? $_POST["state"] : ''; ?>">
                         </div>
                         <div class="form-group">
                             <label for="state">Upload CV</label>
