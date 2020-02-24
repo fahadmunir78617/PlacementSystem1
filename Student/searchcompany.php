@@ -160,6 +160,7 @@ if(isset($_POST['apply']))
                 
                 <div class="caption">
                     <h3><?php echo $row['cname']; ?></h3>
+                    <h3><?php echo $row['cjob_title']; ?></h3>
                     <p class="flex-text text-muted"><br>Salary: $<?php echo $row['csalary']; ?>/Month
                                                     <br>Requirements: <?php echo $row['cdesc']; ?> 
                                                     <br>City: <?php echo $row['ccity']; ?> 
@@ -183,7 +184,10 @@ if(isset($_POST['apply']))
 
                 $search = $con->real_escape_string($_POST['search']);
 
-                $sql = "SELECT * FROM company WHERE cname LIKE '%$search%'";
+                $sql = "SELECT company.id,company.employerid,company.cname,company.cjob_title,company.csalary,company.cdesc,
+ company.cexperience,company.ccity,company.clogo,company.cjob_status,admin.status 
+ FROM admin INNER JOIN company ON admin.id = company.employerid WHERE  company.cjob_status = '1'
+and (company.cjob_title LIKE '%$search%' OR  company.ccity LIKE '%$search%') ORDER BY company.id DESC LIMIT 0,6";
                 $result = $con->query($sql);
                 if($result->num_rows > 0) 
                 {
@@ -197,6 +201,7 @@ if(isset($_POST['apply']))
                 
                         <div class="caption">
                             <h3><?php echo $row['cname']; ?></h3>
+                            <h3><?php echo $row['cjob_title']; ?></h3>
                             <p class="flex-text text-muted"><br>Salary: $<?php echo $row['csalary']; ?>/Month
                                                             <br>Requirements: <?php echo $row['cdesc']; ?> 
                                                             <br>City: <?php echo $row['ccity']; ?> 
