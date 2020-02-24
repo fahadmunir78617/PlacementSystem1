@@ -665,9 +665,10 @@ Get our Jobs
 
                         <?php
                         if (isset($_SESSION['fname'])) {
+                            $Sales_And_Marketing= "Sales And Marketing";
                             ?>
 
-                            <a href="departmentsearch.php?city=Sales And Marketing"><img src="images/Marketing-strategy.jpg" width="100%" class="rounded" height="150"></a>
+                            <a href="departmentsearch.php?city=<?php echo urlencode($Sales_And_Marketing);?>"><img src="images/Marketing-strategy.jpg" width="100%" class="rounded" height="150"></a>
                             <?php
                         }
 
@@ -694,9 +695,10 @@ Get our Jobs
 
                         <?php
                         if (isset($_SESSION['fname'])) {
+                            $Web_Devloper= "Web Developer";
                             ?>
 
-                            <a href="departmentsearch.php?city=Devloper"><img src="images/web.jpg" width="100%" class="rounded" height="150"></a>
+                            <a href="departmentsearch.php?city=<?php echo urlencode($Web_Devloper);?>"><img src="images/web.jpg" width="100%" class="rounded" height="150"></a>
                             <?php
                         }
 
@@ -721,9 +723,10 @@ Get our Jobs
 
                         <?php
                         if (isset($_SESSION['fname'])) {
+                            $Android_Devloper= "Android Developer";
                             ?>
 
-                            <a href="departmentsearch.php?city=Android"><img src="images/android-development-services.jpg" width="100%" class="rounded" height="150"></a>
+                            <a href="departmentsearch.php?city=<?php echo urlencode($Android_Devloper);?>"><img src="images/android-development-services.jpg" width="100%" class="rounded" height="150"></a>
                             <?php
                         }
 
