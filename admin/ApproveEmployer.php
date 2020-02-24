@@ -19,7 +19,7 @@ if(isset($_POST['logout'])){
 
 <header>
 			<div class="logo">
-					<img src="..\images\logo1.png" alt="#HOME" >
+                <img src="..\images\razaq.png" style="width:60px;" alt="#HOME" >
 			</div>
         <?php
         if (isset($_SESSION['adminname'])) {

@@ -38,7 +38,7 @@ if(isset($_POST['logout'])){
             </section>
 	<header>
 			<div class="logo">
-					<img src="..\images\logo1.png" alt="#HOME" >
+
 			</div>
 			<div class="title">Welcome to Student Dashboard</div>
 			<nav>
