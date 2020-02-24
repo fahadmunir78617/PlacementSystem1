@@ -133,6 +133,7 @@ if(isset($_POST['logout'])){
                                     <h3>
                                         <?php echo $row['cname']; ?>
                                     </h3>
+                                    <h3><?php echo $row['cjob_title']; ?></h3>
                                     <p class="flex-text text-muted"><br>Salary: $
                                         <?php echo $row['csalary']; ?>/Month
                                         <br>Requirements:
@@ -164,7 +165,7 @@ if(isset($_POST['logout'])){
 
 
 
-                $sql = "SELECT * FROM company WHERE cname LIKE '%$search%' AND employerid = '$employerid'";
+                $sql = "SELECT * FROM company WHERE  cjob_title LIKE '%$search%' AND employerid = '$employerid'";
                 $result = $con->query($sql); 
                 if($result->num_rows > 0) 
                 {
@@ -180,6 +181,7 @@ if(isset($_POST['logout'])){
                                     <h3>
                                         <?php echo $row['cname']; ?>
                                     </h3>
+                                    <h3><?php echo $row['cjob_title']; ?></h3>
                                     <p class="flex-text text-muted"><br>Salary: $
                                         <?php echo $row['csalary']; ?>/Month
                                         <br>Requirements:
