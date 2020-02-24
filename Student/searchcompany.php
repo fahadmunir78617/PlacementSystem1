@@ -147,7 +147,10 @@ if(isset($_POST['apply']))
             if(empty($_POST['search']))
             {
 
-          $sql = "SELECT * FROM company Order By cname ASC";
+                $sql = "SELECT company.id,company.employerid,company.cname,company.cjob_title,company.csalary,company.cdesc,
+            company.cexperience,company.ccity,company.clogo,company.cjob_status,admin.status 
+            FROM admin INNER JOIN company ON admin.id = company.employerid WHERE admin.status ='1' and company.cjob_status = '1'
+            ORDER BY company.id DESC";
           $result = $con->query($sql);
           if($result->num_rows > 0) 
           {
